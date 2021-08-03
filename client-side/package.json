@@ -1,0 +1,27 @@
+{
+  "name": "client-side",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.9",
+    "babel-jest": "^27.0.6",
+    "jest": "^27.0.6",
+    "parcel": "^2.0.0-beta.2"
+  },
+  "extends": "@parcel/config-default",
+  "transformers": {
+    "*.jpg": [
+      "@parcel/transformer-raw"
+    ]
+  },
+  "description": ""
+}
