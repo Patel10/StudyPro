@@ -1,0 +1,19 @@
+#app {
+    margin: 2rem auto;
+    max-width: 100%;
+    min-height: 95vh;
+    width: 1200px;
+    text-align: center;
+    background-color: rgb(228, 234, 236);
+    border-radius: 12px;
+}
+#footer{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto;
+    max-width: 1%;
+    width: 900px;
+    
+}
