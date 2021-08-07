@@ -19,6 +19,7 @@ public class StudentController {
 
         @GetMapping("/api/students/{studentId}")
     public Student getStudent(@ParthVariable Long studentId) {
+
         return studentRepo.findById(studentRepo).get();
     }
 }
