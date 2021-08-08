@@ -16,7 +16,7 @@ import java.util.Objects;
         @GeneratedValue
         private Long id;
         private String title;
-        private String level;
+        private String studentName;
 
         @ManyToMany(mappedBy = "hashTags")
         private Collection<FlashCard> flashCards;
@@ -34,15 +34,15 @@ import java.util.Objects;
             return title;
         }
 
-        public String getLevel() {
-            return level;
+        public String getStudentName() {
+            return studentName;
         }
 
-        public HashTag(String title, String level, FlashCard... flashCards) {
+        public HashTag(String title, String studentName, FlashCard... flashCards) {
 
 
             this.title = title;
-            this.level = level;
+            this.studentName = studentName;
 this.flashCards= new ArrayList<FlashCard>(Arrays.asList(flashCards));
 
 }

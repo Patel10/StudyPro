@@ -12,27 +12,28 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin
 public class HashTagController {
 
-    @Resource
-    private HashTagController {
-
-        @GetMapping("/api/hashtags")
-        public Collection<HashTag> getHashTags() {
-            return (Collection<HashTag>) hashTagRepo.findAll();
-        }
-
-        @PostMapping("/api/add-hashtag")
-        public Collection<HashTag> addHashTag(@RequestBody String body) throws JSONException {
-            JSONObject newHashTag = new JSONObject(body);
-            String hashTagName = newHashTag.getString("hashTagName");
-            Optional<HashTag> hashTagToAddOpt = hashTagRepo.findByName(hashTagName);
-
-            if (hashTagToAddOpt.isEmpty()) {
-                HashTag hashTagToAdd = new HashTag(hashTagName);
-                hashTagRepo.save(hashTagToAdd);
-            }
-            return (Collection<HashTag>) hashTagRepo.findAll();
-        }
+//    @Resource
+//    private HashTagController {
+//
+//        @GetMapping("/api/hashtags")
+//        public Collection<HashTag> getHashTags() {
+//            return (Collection<HashTag>) hashTagRepo.findAll();
+//        }
+//
+//        @PostMapping("/api/add-hashtag")
+//        public Collection<HashTag> addHashTag(@RequestBody String body) throws JSONException {
+//            JSONObject newHashTag = new JSONObject(body);
+//            String hashTagName = newHashTag.getString("hashTagName");
+//            Optional<HashTag> hashTagToAddOpt = hashTagRepo.findByName(hashTagName);
+//
+//            if (hashTagToAddOpt.isEmpty()) {
+//                HashTag hashTagToAdd = new HashTag(hashTagName);
+//                hashTagRepo.save(hashTagToAdd);
+//            }
+//            return (Collection<HashTag>) hashTagRepo.findAll();
+//        }
+//    }
     }
-    }
 
-}
+
+
