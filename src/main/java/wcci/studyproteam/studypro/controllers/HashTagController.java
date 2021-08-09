@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
+import wcci.studyproteam.studypro.models.HashTag;
 
 
 @RestController

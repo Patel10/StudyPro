@@ -4,6 +4,7 @@ package wcci.studyproteam.studypro.controllers;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import wcci.studyproteam.studypro.models.Student;
+import wcci.studyproteam.studypro.repositories.StudentRepository;
 
 import javax.annotation.Resource;
 import java.util.Collection;

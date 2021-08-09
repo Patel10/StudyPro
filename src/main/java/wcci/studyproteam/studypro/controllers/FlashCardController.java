@@ -1,5 +1,7 @@
 package wcci.studyproteam.studypro.controllers;
+import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
+import wcci.studyproteam.studypro.HashTagRepository;
 import wcci.studyproteam.studypro.models.FlashCard;
 import wcci.studyproteam.studypro.models.HashTag;
 import wcci.studyproteam.studypro.models.Student;
@@ -17,7 +19,8 @@ public class FlashCardController {
 
     @Resource
     private FlashCardRepository flashCardRepo;
-    @Resourceprivate HashTagRepository slashCardRepo;
+//    @Resource
+//    private HashTagRepository slashCardRepo;
 
     @Resource
     private HashTagRepository hasTagRepo;

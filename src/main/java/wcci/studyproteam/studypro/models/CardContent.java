@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-
 @Entity
 public class CardContent {
     @Id
@@ -64,5 +63,4 @@ public class CardContent {
         return Objects.hash(id);
     }
 }
-
 
