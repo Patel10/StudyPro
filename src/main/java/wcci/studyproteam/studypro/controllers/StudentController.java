@@ -2,6 +2,7 @@ package wcci.studyproteam.studypro.controllers;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import wcci.studyproteam.studypro.models.Student;
 import wcci.studyproteam.studypro.repositories.StudentRepository;
@@ -14,13 +15,13 @@ public class StudentController {
     @Resource
     private StudentRepository studentRepo;
 
-    @GetMagging("/api/Students")
+    @GetMapping("/api/Students")
     public Collection<Student> getStudents() {
         return (Collection<Student>) studentRepo.findAll();}
 
         @GetMapping("/api/students/{studentId}")
-    public Student getStudent(@ParthVariable Long studentId) {
+    public Student getStudent(@PathVariable Long studentId) {
 
-        return studentRepo.findById(studentRepo).get();
+        return studentRepo.findById(studentId).get();
     }
 }

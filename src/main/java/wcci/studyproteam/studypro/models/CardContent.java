@@ -10,7 +10,9 @@ public class CardContent {
     @GeneratedValue
     private Long id;
     private String studentName;
+    @Lob
     private String title;
+    @Lob
     private String info;
     private String note;
 
