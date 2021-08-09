@@ -1,4 +1,4 @@
-package wcci.studyproteam.studypro;
+package wcci.studyproteam.studypro.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 import wcci.studyproteam.studypro.models.HashTag;
@@ -6,5 +6,5 @@ import wcci.studyproteam.studypro.models.HashTag;
 import java.util.Optional;
 
 public interface HashTagRepository extends CrudRepository<HashTag,Long> {
-    Optional<HashTag>findByName(String hashTagName);
+    Optional<HashTag>findByTitle(String title);
 }

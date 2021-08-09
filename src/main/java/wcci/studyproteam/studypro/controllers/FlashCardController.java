@@ -1,12 +1,13 @@
 package wcci.studyproteam.studypro.controllers;
+//import org.json.JSONException;
+//import org.json.JSONObject;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
-import wcci.studyproteam.studypro.HashTagRepository;
+import wcci.studyproteam.studypro.repositories.HashTagRepository;
 import wcci.studyproteam.studypro.models.FlashCard;
 import wcci.studyproteam.studypro.models.HashTag;
-import wcci.studyproteam.studypro.models.Student;
-import wcci.studyproteam.studypro.respositories.FlashCardRepository;
-import wcci.studyproteam.studypro.respositories.HashTagRepository;
+import wcci.studyproteam.studypro.repositories.FlashCardRepository;
 
 
 import javax.annotation.Resource;
@@ -19,15 +20,16 @@ public class FlashCardController {
 
     @Resource
     private FlashCardRepository flashCardRepo;
-//    @Resource
-//    private HashTagRepository slashCardRepo;
+//   @Resource
+//   private HashTagRepository flashCardRepo;
 
     @Resource
-    private HashTagRepository hasTagRepo;
+    private HashTagRepository hashTagRepo;
 
     @GetMapping("/api/flashCards")
     public Collection<FlashCard> getFlashCards(){
-    return (Collection<FlashCard>) flashCardRepo.findAll();}
+    return (Collection<FlashCard>) flashCardRepo.findAll();
+    }
 
     @GetMapping("/api/flashCards/{flashCardId}")
     public FlashCard getFlashCard(@PathVariable Long flashCardId){
@@ -38,7 +40,7 @@ public class FlashCardController {
     public Optional<FlashCard> addHashTagToFlashCard(@RequestBody String body, @PathVariable Long id) throws JSONException {
         JSONObject newHashTag = new JSONObject(body);
         String hashTagTitle = newHashTag.getString("hashTagTitle");
-        Optional<HashTag> hashTagToAddOpt = hashTagRepo.findByName(hashTagTitle);
+        Optional<HashTag> hashTagToAddOpt = hashTagRepo.findByTitle(hashTagTitle);
 
         if (hashTagToAddOpt.isPresent()) {
             Optional<FlashCard> flashCardToAddHashTagToOpt = flashCardRepo.findById(id);
