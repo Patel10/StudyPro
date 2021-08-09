@@ -1,3 +1,4 @@
+import aboutUs from './components/aboutUs';
 import Home from './components/Home';
 
 
@@ -11,6 +12,7 @@ function buildPage(){
 
 
 function landHome(){
-    const app = document.querySelector("app");
-    app.innerHTML = Home();
+    const app = document.querySelector("#app");
+   app.innerHTML = Home();
+   //app.innerHTML = aboutUs();
 }
