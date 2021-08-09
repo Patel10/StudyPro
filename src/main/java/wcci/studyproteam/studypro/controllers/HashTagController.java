@@ -13,9 +13,9 @@ import wcci.studyproteam.studypro.models.HashTag;
 @CrossOrigin
 public class HashTagController {
 
-    @Resource
-    private HashTagController {
-
+//    @Resource
+//    private HashTagController {
+//
 //        @GetMapping("/api/hashtags")
 //        public Collection<HashTag> getHashTags() {
 //            return (Collection<HashTag>) hashTagRepo.findAll();
@@ -33,7 +33,7 @@ public class HashTagController {
 //            }
 //            return (Collection<HashTag>) hashTagRepo.findAll();
 //        }
-  }
+//  }
     }
 
 
