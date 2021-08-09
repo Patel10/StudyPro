@@ -1,4 +1,5 @@
 package wcci.studyproteam.studypro.models;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 //import javax.persistence.Entity;
 import javax.persistence.*;
@@ -14,7 +15,7 @@ public class FlashCard {
     private String description;
     private String studentName;
 
-    @OneToMany (mappedBy = "flashCard")
+    @OneToMany(mappedBy = "flashCard")
     @JsonIgnore
     private Collection<CardContent> cardContents;
     @ManyToMany
@@ -27,26 +28,30 @@ public class FlashCard {
         return student;
     }
 
-    public Long getId (){
+    public Long getId() {
 
         return id;
     }
-    public String getTitle(){
+
+    public String getTitle() {
 
         return title;
     }
-    public String getDescription(){
+
+    public String getDescription() {
 
         return description;
     }
-    public String getStudentName(){
+
+    public String getStudentName() {
 
         return studentName;
     }
 
-    public FlashCard(){
+    public FlashCard() {
 
     }
+
     public Collection<CardContent> getCardContents() {
         return cardContents;
     }
@@ -55,11 +60,12 @@ public class FlashCard {
         return hashTags;
     }
 
-    public FlashCard(String title, String studentName, String description){
+    public FlashCard(String title, String studentName, String description) {
         this.title = title;
         this.studentName = studentName;
         this.description = description;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

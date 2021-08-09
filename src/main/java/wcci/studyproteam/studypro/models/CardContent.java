@@ -1,9 +1,11 @@
 package wcci.studyproteam.studypro.models;
 
 import java.util.Objects;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+
 @Entity
 public class CardContent {
     @Id
@@ -18,7 +20,6 @@ public class CardContent {
 
     @ManyToOne
     private FlashCard flashCard;
-
 
 
     public Long getId() {

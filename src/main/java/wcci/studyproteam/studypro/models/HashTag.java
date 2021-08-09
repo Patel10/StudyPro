@@ -13,42 +13,42 @@ import java.util.Objects;
 
 
 @Entity
-    public class HashTag {
-        @Id
-        @GeneratedValue
-        private Long id;
-        private String title;
-        private String studentName;
+public class HashTag {
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String title;
+    private String studentName;
 
-        @ManyToMany(mappedBy = "hashTags")
-        @JsonIgnore
-        private Collection<FlashCard> flashCards;
-
-
-        public HashTag() {
-        }
+    @ManyToMany(mappedBy = "hashTags")
+    @JsonIgnore
+    private Collection<FlashCard> flashCards;
 
 
-        public Long getId() {
-            return id;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public String getStudentName() {
-            return studentName;
-        }
-
-        public HashTag(String title, String studentName, FlashCard... flashCards) {
+    public HashTag() {
+    }
 
 
-            this.title = title;
-            this.studentName = studentName;
-this.flashCards= new ArrayList<FlashCard>(Arrays.asList(flashCards));
+    public Long getId() {
+        return id;
+    }
 
-}
+    public String getTitle() {
+        return title;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public HashTag(String title, String studentName, FlashCard... flashCards) {
+
+
+        this.title = title;
+        this.studentName = studentName;
+        this.flashCards = new ArrayList<FlashCard>(Arrays.asList(flashCards));
+
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -59,12 +59,12 @@ this.flashCards= new ArrayList<FlashCard>(Arrays.asList(flashCards));
     }
 
 
-        @Override
-        public int hashCode() {
-            return Objects.hash(id);
-        }
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 
-        }
+}
 
 
 
