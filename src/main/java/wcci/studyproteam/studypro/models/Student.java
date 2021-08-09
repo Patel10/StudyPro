@@ -1,4 +1,5 @@
 package wcci.studyproteam.studypro.models;
+
 import java.util.Collection;
 import java.util.Objects;
 import javax.persistence.Entity;
@@ -8,57 +9,57 @@ import javax.persistence.OneToMany;
 
 
 @Entity
-        public class Student {
-            @Id
-            @GeneratedValue
-            private Long id;
-            private String studentName;
-            private String grade;
+public class Student {
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String studentName;
+    private String grade;
 
-            @OneToMany(mappedBy = "student")
-            private Collection<FlashCard> flashCards;
+    @OneToMany(mappedBy = "student")
+    private Collection<FlashCard> flashCards;
 
-            public Collection<FlashCard> getFlashCards() {
-                return flashCards;
-            }
+    public Collection<FlashCard> getFlashCards() {
+        return flashCards;
+    }
 
-            public Student() {
-            }
+    public Student() {
+    }
 
-            public Long getId() {
-                return id;
+    public Long getId() {
+        return id;
 
-            }
+    }
 
-            public String getStudentName() {
+    public String getStudentName() {
 
-                return studentName;
-            }
+        return studentName;
+    }
 
-            public String getGrade() {
-                return grade;
-            }
-
-
-            public Student(String studentName, String grade) {
-                this.studentName = studentName;
-                this.grade = grade;
-
-            }
+    public String getGrade() {
+        return grade;
+    }
 
 
-            @Override
-            public boolean equals(Object o) {
-                if (this == o) return true;
-                Student student= (Student) o;
-                return id.equals(student.id);
-            }
+    public Student(String studentName, String grade) {
+        this.studentName = studentName;
+        this.grade = grade;
 
-            @Override
-            public int hashCode() {
-                return Objects.hash(id);
-            }
-        }
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        Student student = (Student) o;
+        return id.equals(student.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+}
 
 
       

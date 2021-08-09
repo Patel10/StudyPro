@@ -17,9 +17,9 @@ public class CardContentController {
     private CardContentRepository cardContentRepo;
 
     @GetMapping("/api/cardContents")
-    public Collection<CardContent> getcardContents(){
+    public Collection<CardContent> getCardContents() {
         return (Collection<CardContent>) cardContentRepo.findAll();
-            }
+    }
 
     @GetMapping("/api/cardContents/{cardContentId}")
     public CardContent getCardContent(@PathVariable Long cardContentId) {
