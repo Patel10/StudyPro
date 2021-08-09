@@ -18,7 +18,6 @@ public class FlashCard {
     @JsonIgnore
     private Collection<CardContent> cardContents;
     @ManyToMany
-    @JsonIgnore
     private Set<HashTag> hashTags;
     @ManyToOne
     @JsonIgnore
@@ -75,6 +74,8 @@ public class FlashCard {
     }
 
 
-
+    public void addHashTag(HashTag hashTag) {
+        hashTags.add(hashTag);
+    }
 }
 

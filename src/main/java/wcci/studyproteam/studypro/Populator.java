@@ -3,18 +3,19 @@ package wcci.studyproteam.studypro;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import wcci.studyproteam.studypro.models.CardContent;
+import wcci.studyproteam.studypro.models.FlashCard;
 import wcci.studyproteam.studypro.repositories.CardContentRepository;
+import wcci.studyproteam.studypro.repositories.FlashCardRepository;
 
 import javax.annotation.Resource;
 
 @Component
 public class Populator implements CommandLineRunner {
 
-//    @Resource
-//    private FlashCardRepository flashCardRepo;
-@Resource
-private CardContentRepository cardContentRepo;
-
+    @Resource
+    private FlashCardRepository flashCardRepo;
+    @Resource
+    private CardContentRepository cardContentRepo;
 
 
     @Override
@@ -39,12 +40,15 @@ private CardContentRepository cardContentRepo;
         CardContent card6 = new CardContent("Spelling", "sock, lock, stock, mock, rock, dock, knock, flock, shock, " +
                 "block, clock", "Rhyming with sock", "Halima Smith");
 
-        CardContentRepo.save(card1);
-        CardContentRepo.save(card2);
-        CardContentRepo.save(card3);
-        CardContentRepo.save(card4);
-        CardContentRepo.save(card5);
-        CardContentRepo.save(card6);
+        cardContentRepo.save(card1);
+        cardContentRepo.save(card2);
+        cardContentRepo.save(card3);
+        cardContentRepo.save(card4);
+        cardContentRepo.save(card5);
+        cardContentRepo.save(card6);
+
+        FlashCard flashCard1 = new FlashCard("The moon", "Halima", "its the moon");
+        flashCardRepo.save(flashCard1);
 
     }
 }

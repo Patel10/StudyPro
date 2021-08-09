@@ -1,5 +1,7 @@
 package wcci.studyproteam.studypro.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -19,6 +21,7 @@ import java.util.Objects;
         private String studentName;
 
         @ManyToMany(mappedBy = "hashTags")
+        @JsonIgnore
         private Collection<FlashCard> flashCards;
 
 

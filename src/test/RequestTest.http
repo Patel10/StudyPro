@@ -1,0 +1,10 @@
+GET http://localhost:8080/api/cardContents/
+###
+GET http://localhost:8080/api/flashCards/
+###
+POST http://localhost:8080/api/flashCards/7/add-hashtag
+Content-Type: application/json
+
+{ 
+    "hashTagTitle": "cool"
+}
