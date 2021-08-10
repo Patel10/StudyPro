@@ -1,5 +1,6 @@
 import aboutUs from './components/aboutUs';
 import Home from './components/Home';
+;
 
 
 buildPage();
@@ -7,6 +8,9 @@ buildPage();
 
 function buildPage(){
     landHome();
+    
+    
+
 }
 
 
@@ -16,3 +20,4 @@ function landHome(){
    app.innerHTML = Home();
    //app.innerHTML = aboutUs();
 }
+
