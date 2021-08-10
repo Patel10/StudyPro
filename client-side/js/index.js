@@ -1,3 +1,4 @@
+import aboutUs from './components/aboutUs';
 import Home from './components/Home';
 import Header from './components/Header';
 import HashTags from './components/hashTags';
