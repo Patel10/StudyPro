@@ -1,4 +1,5 @@
 package wcci.studyproteam.studypro.controllers;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
@@ -23,13 +24,14 @@ public class FlashCardController {
     private HashTagRepository hashTagRepo;
 
     @GetMapping("/api/flashCards")
-    public Collection<FlashCard> getFlashCards(){
-    return (Collection<FlashCard>) flashCardRepo.findAll();
+    public Collection<FlashCard> getFlashCards() {
+        return (Collection<FlashCard>) flashCardRepo.findAll();
     }
 
     @GetMapping("/api/flashCards/{flashCardId}")
-    public FlashCard getFlashCard(@PathVariable Long flashCardId){
-        return flashCardRepo.findById(flashCardId).get();}
+    public FlashCard getFlashCard(@PathVariable Long flashCardId) {
+        return flashCardRepo.findById(flashCardId).get();
+    }
 
 
     @PostMapping("/api/flashCards/{id}/add-hashtag")

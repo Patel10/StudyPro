@@ -17,9 +17,10 @@ public class StudentController {
 
     @GetMapping("/api/Students")
     public Collection<Student> getStudents() {
-        return (Collection<Student>) studentRepo.findAll();}
+        return (Collection<Student>) studentRepo.findAll();
+    }
 
-        @GetMapping("/api/students/{studentId}")
+    @GetMapping("/api/students/{studentId}")
     public Student getStudent(@PathVariable Long studentId) {
 
         return studentRepo.findById(studentId).get();

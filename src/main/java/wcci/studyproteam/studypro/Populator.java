@@ -34,9 +34,9 @@ public class Populator implements CommandLineRunner {
                 "and is regarded by many as the greatest novelist of the Victorian era", "Essay Test");
         CardContent card2 = new CardContent("Elijah Stewart", "Earth", "The Earth's equator is an imaginary planetary line that is about 40,075 km (24,901 mi) long in circumference. The equator divides the planet into the Northern Hemisphere " +
                 "and Southern Hemisphere and is located at 0 degrees latitude, the halfway line between the North Pole and South Pole.[1]", "for geography test");
-        CardContent card3 = new CardContent("Andrew Washington","PI" , "The number π -paɪ; spelled out as pi- is a mathematical constant, approximately " +
+        CardContent card3 = new CardContent("Andrew Washington", "PI", "The number π -paɪ; spelled out as pi- is a mathematical constant, approximately " +
                 "equal to 3.14159.", "Math class - get hall pass if i know this");
-        CardContent card4 = new CardContent("Andrew Washington", "Make Peanut Butter and Jelly Sandwich","Step 1: Gather Your Ingredients for the Sandwich. ...\n" +
+        CardContent card4 = new CardContent("Andrew Washington", "Make Peanut Butter and Jelly Sandwich", "Step 1: Gather Your Ingredients for the Sandwich. ...\n" +
                 "Step 2: Put Gloves on (optional) ...\n" +
                 "Step 3: Pull Out Two Slices of Bread. ...\n" +
                 "Step 4: Open Peanut Butter and Jelly. ...\n" +
@@ -44,8 +44,8 @@ public class Populator implements CommandLineRunner {
                 "Step 6: Spread the Jelly Onto the Other Slice of Bread.", "Health Class");
         CardContent card5 = new CardContent("Halima Smith", "Bullies", "The best way for me to stop bullies is that I will tell my teacher and my " +
                 "mother.  I will not let the bully make me fight them.  I don't like bullies ", "stop bullies");
-        CardContent card6 = new CardContent("Halima Smith","Spelling Class" , "sock, lock, stock, mock, rock, dock, knock, flock, shock, " +
-                        "block, clock", "words that rhyme with sock");
+        CardContent card6 = new CardContent("Halima Smith", "Spelling Class", "sock, lock, stock, mock, rock, dock, knock, flock, shock, " +
+                "block, clock", "words that rhyme with sock");
 
         cardContentRepo.save(card1);
         cardContentRepo.save(card2);
@@ -58,8 +58,8 @@ public class Populator implements CommandLineRunner {
         FlashCard flashCard2 = new FlashCard("Earth", "Elijah Stewart", "Earth info");
         FlashCard flashCard3 = new FlashCard("PI", "Andrew Washington", "learn Pi get hall pass");
         FlashCard flashCard4 = new FlashCard("Make Peanut Butter and Jelly Sandwich", "Andrew Washington", "steps for sandwich");
-        FlashCard flashCard5= new FlashCard("Bullies", "Halima Smith", "stop bullies");
-        FlashCard flashCard6= new FlashCard("Spelling Class", "Halima Smith", "10 words rhyme with sock");
+        FlashCard flashCard5 = new FlashCard("Bullies", "Halima Smith", "stop bullies");
+        FlashCard flashCard6 = new FlashCard("Spelling Class", "Halima Smith", "10 words rhyme with sock");
 
         flashCardRepo.save(flashCard1);
         flashCardRepo.save(flashCard2);
