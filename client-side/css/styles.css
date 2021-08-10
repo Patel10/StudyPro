@@ -93,7 +93,7 @@ body {
   }
   
   .img-text-wrapper:hover .subtitle {
-    color: white;
+    color: black;
     font-weight: 600;
   }
   

@@ -4,7 +4,6 @@ import Header from './components/Header';
 import HashTags from './components/hashTags';
 // import searchBy from './components/searchBy';
 import signUp from './components/signUp';
-// import AboutUs from './components/AboutUs';
 // import ContactUs from './components/ContactUs';
 import crud from './crud/crud';
 
