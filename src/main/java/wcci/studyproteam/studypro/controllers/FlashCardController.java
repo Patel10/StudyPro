@@ -19,8 +19,6 @@ public class FlashCardController {
 
     @Resource
     private FlashCardRepository flashCardRepo;
-//   @Resource
-//   private HashTagRepository flashCardRepo;
 
     @Resource
     private HashTagRepository hashTagRepo;

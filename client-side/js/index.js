@@ -11,7 +11,7 @@ import crud from './crud/crud';
 buildPage();
 
 
-function buildPage(){
+function buildPage() {
     landHome();
     header();
     hashtags();
@@ -24,24 +24,27 @@ function buildPage(){
 
 
 
-function landHome(){
+function landHome() {
     const app = document.querySelector("#app");
        app.innerHTML = Home();
 }
-function header(){
+
+function header() {
     const nav_header = document.querySelector("#header");
     nav_header.innerHTML = Header();
 }
-function hashtags(){
+
+function hashtags() {
     const nav_hash = document.querySelector(".nav_hashtags");
     nav_hash.addEventListener('click', () => {
         const app = document.querySelector("#app");
         crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
             console.log(hashtags);
-            app.innerHTML = hashTagPage(hashTags)
+            app.innerHTML = HashTags(hashtags)
         });
     });
 }
+
 function searchBy() {
     const search_by = document.querySelector(".nav_search");
     search_by.addEventListener('click', () => {
@@ -52,28 +55,29 @@ function searchBy() {
         })
     })
 }
-function signup(){
+
+function signup() {
     const signup = document.querySelector(".nav_sign");
-        signup.addEventListener('click', () => {
-            const app = document.querySelector('#app');
-            app.innerHTML= signUp();
-        })
+    signup.addEventListener('click', () => {
+        const app = document.querySelector('#app');
+        app.innerHTML = signUp();
+    })
 }
 
 
-function about(){
+function about() {
     const about_us = document.querySelector(".nav_about");
-        about_us.addEventListener("click", () => {
-            const app = document.querySelector("#app");
-            app.innerHTML = aboutUs();
-        })
-    
+    about_us.addEventListener("click", () => {
+        const app = document.querySelector("#app");
+        app.innerHTML = aboutUs();
+    })
+
 }
-function contact(){
+
+function contact() {
     const contact_us = document.querySelector(".nav_contact");
         contact_us.addEventListener("click", () => {
             const app = document.querySelector("#app");
             app.innerHTML = contactUs();
         })
 }
-
