@@ -1,7 +1,8 @@
 export default function Header(){
     return `
-    <ul class='nav_bar'>
     
+    <ul class='nav_bar'>
+
     <li class='nav_home'>HOME</li>
     <li class='nav_hashtags'>HASHTAGS</li>
     <li class='nav_search'>SEARCH BY</li>

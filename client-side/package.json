@@ -17,11 +17,5 @@
     "jest": "^27.0.6",
     "parcel": "^2.0.0-beta.2"
   },
-  "extends": "@parcel/config-default",
-  "transformers": {
-    "*.jpg": [
-      "@parcel/transformer-raw"
-    ]
-  },
   "description": ""
 }
