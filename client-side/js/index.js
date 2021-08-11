@@ -4,7 +4,7 @@ import Header from './components/Header';
 import HashTags from './components/hashTags';
 // import searchBy from './components/searchBy';
 import signUp from './components/signUp';
-// import ContactUs from './components/ContactUs';
+import contactUs from './components/contactUs';
 import crud from './crud/crud';
 
 
@@ -26,7 +26,7 @@ function buildPage(){
 
 function landHome(){
     const app = document.querySelector("#app");
-    app.innerHTML = Home();
+       app.innerHTML = Home();
 }
 function header(){
     const nav_header = document.querySelector("#header");
@@ -65,7 +65,7 @@ function about(){
     const about_us = document.querySelector(".nav_about");
         about_us.addEventListener("click", () => {
             const app = document.querySelector("#app");
-            app.innerHTML = AboutUs();
+            app.innerHTML = aboutUs();
         })
     
 }
@@ -73,7 +73,7 @@ function contact(){
     const contact_us = document.querySelector(".nav_contact");
         contact_us.addEventListener("click", () => {
             const app = document.querySelector("#app");
-            app.innerHTML = ContactUs();
+            app.innerHTML = contactUs();
         })
 }
 
