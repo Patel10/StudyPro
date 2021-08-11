@@ -16,7 +16,7 @@ function buildPage() {
     landHome();
     header();
     my_Cards();
-    hashtags();
+    // hashtags();
     searchBy();
     signup();
     about();
@@ -36,16 +36,16 @@ function header() {
     nav_header.innerHTML = Header();
 }
 
-function hashtags() {
-    const nav_hash = document.querySelector(".nav_hashtags");
-    nav_hash.addEventListener('click', () => {
-        const app = document.querySelector("#app");
-        crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
-            console.log(hashtags);
-            app.innerHTML = HashTags(hashtags)
-        });
-    });
-}
+// function hashtags() {
+//     const nav_hash = document.querySelector(".nav_hashtags");
+//     nav_hash.addEventListener('click', () => {
+//         const app = document.querySelector("#app");
+//         crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
+//             console.log(hashtags);
+//             app.innerHTML = HashTags(hashtags)
+//         });
+//     });
+// }
 
 function searchBy() {
     const search_by = document.querySelector(".nav_search");
