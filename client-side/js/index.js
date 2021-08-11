@@ -1,6 +1,7 @@
 import aboutUs from './components/aboutUs';
 import Home from './components/Home';
 import Header from './components/Header';
+import myCards from './components/myCards';
 import HashTags from './components/hashTags';
 // import searchBy from './components/searchBy';
 import signUp from './components/signUp';
@@ -15,6 +16,7 @@ buildPage();
 function buildPage(){
     landHome();
     header();
+    my_Cards();
     hashtags();
     searchBy();
     signup();
@@ -60,7 +62,13 @@ function signup(){
             app.innerHTML= signUp();
         })
 }
-
+function my_Cards(){
+    const card = document.querySelector(".nav_myCards");
+        card.addEventListener('click', () => {
+            const app = document.querySelector("#app");
+            app.innerHTML = myCards();
+        })
+}
 
 function about(){
     const about_us = document.querySelector(".nav_about");
