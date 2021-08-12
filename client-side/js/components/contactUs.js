@@ -8,7 +8,7 @@ export default function contactUs(){
     return `
     <div class="top">
     <div class="top1">
-        <p>Contact Us</p>
+        <p class="pClass">Contact Us</p>
         <div class="home">
            
         </div>

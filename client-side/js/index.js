@@ -13,13 +13,14 @@ buildPage();
 
 
 function buildPage() {
-    landHome();
+    
     header();
     my_Cards();
     searchByBtn();
     signup();
     about();
     contact();
+    landHome();
 
 }
 
