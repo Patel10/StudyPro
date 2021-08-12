@@ -14,9 +14,10 @@ public class FlashCard {
     private String title;
     private String description;
     private String studentName;
+    private String image;
 
     @OneToMany(mappedBy = "flashCard")
-    @JsonIgnore
+
     private Collection<CardContent> cardContents;
     @ManyToMany
     private Set<HashTag> hashTags;
@@ -38,6 +39,7 @@ public class FlashCard {
         return title;
     }
 
+
     public String getDescription() {
 
         return description;
@@ -46,6 +48,9 @@ public class FlashCard {
     public String getStudentName() {
 
         return studentName;
+    }
+    public String getImage() {
+        return image;
     }
 
     public FlashCard() {
@@ -60,10 +65,11 @@ public class FlashCard {
         return hashTags;
     }
 
-    public FlashCard(String title, String studentName, String description) {
+    public FlashCard(String title, String studentName, String description,String image) {
         this.title = title;
         this.studentName = studentName;
         this.description = description;
+        this.image = image;
     }
 
     @Override
