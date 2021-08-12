@@ -1,5 +1,5 @@
 import aboutUs from './components/aboutUs';
-import Home from './components/Home';
+import home from './components/home';
 import Header from './components/Header';
 import myCards from './components/myCards';
 import HashTags from './components/hashTags';
@@ -7,20 +7,22 @@ import searchBy from './components/searchBy';
 import signUp from './components/signUp';
 import contactUs from './components/contactUs';
 import crud from './crud/crud';
+import flashCard from './components/flashCard';
 
 
 buildPage();
 
 
 function buildPage() {
-    landHome();
+    
     header();
     my_Cards();
-    searchBy();
     searchByBtn();
     signup();
     about();
     contact();
+    landHome();
+    FlashCard();
 
 }
 
@@ -28,7 +30,7 @@ function buildPage() {
 
 function landHome() {
     const app = document.querySelector("#app");
-       app.innerHTML = Home();
+       app.innerHTML = home();
 }
 
 function contact() {
@@ -86,9 +88,9 @@ function my_Cards(){
     const card = document.querySelector(".nav_myCards");
         card.addEventListener('click', () => {
             const app = document.querySelector("#app");
-            crud.getRequest('http://localhost:8080/api/myCards', myCards => {
-                console.log(myCards);
-                app.innerHTML = myCards();
+            crud.getRequest('http://localhost:8080/api/flashCards', Cards => {
+                console.log(Cards);
+                app.innerHTML = myCards(Cards);
             })
         })
 }
@@ -108,4 +110,17 @@ function contact() {
             const app = document.querySelector("#app");
             app.innerHTML = contactUs();
         })
+}
+
+function FlashCard() {
+    const card = document.querySelector(".nav_home");
+    card.addEventListener("click", () => {
+
+        const app = document.querySelector("#app");
+        crud.getRequest(`http://localhost:8080/api/flashCards/1`, currentCard => {
+            console.log(currentCard);
+            app.innerHTML = flashCard(currentCard)
+        })
+    })
+
 }
