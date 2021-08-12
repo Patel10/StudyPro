@@ -1,23 +1,18 @@
-export default function HashTags(hashTags){
+export default function HashTags(hashTags) {
     return `
+   
+       <ul class="tag-list">
     
-    <ul class="tag_list">
-    
-    ${hashTags.map((hashTags) => {
+    ${hashTags.map((hashTag) => {
         return `
-        <li class="tag-list-id">${hashTag.id}</li>
-        // do same for name and subject or something similar 
-        
-        `
-    })}
-    
-    
-    
-    
-    
-    
-    </ul>
-    
-    
-    `
+        <li class="tag-list__id">${hashTag.id}</li>
+        <li class="tag-list__title">${hashTag.title}</li>
+        <li class="tag-list__studentName">${hashTag.studentName}</li>
+       
+      
+        `;
+    })
+    .join('')}
+  </ul>
+      `;
 }
