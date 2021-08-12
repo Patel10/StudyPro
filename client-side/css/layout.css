@@ -23,20 +23,38 @@
     height: 20%;
     background-color: grey;
     color: white;
+    
+    
+}
+
+.nav_bar{
+    float: right;
 }
 .header li {
     display: inline-block;
-    border-bottom: 1px solid transparent;
-        border-radius: 10px;
+    /* border-bottom: 1px solid transparent; */
+        /* border-radius: 10px; */
     margin-right:30px;
+    margin-left: 30px;
+    
+ 
+    
+    
+    
     
     
 
 }
 .header li:hover {
    color: lightgray;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid white;
     transition: color 0.5s;
     
 
+}
+
+.study_pro {
+    font-family: 'Style Script', cursive;
+    font-weight: 300;
+    margin-right: 250px;
 }

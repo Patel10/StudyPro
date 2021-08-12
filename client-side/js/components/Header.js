@@ -1,6 +1,6 @@
 export default function Header(){
     return `
-    
+    <p class='study_pro'> Study Pro</p>
     <ul class='nav_bar'>
 
     <li class='nav_home'>HOME</li>
