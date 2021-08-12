@@ -17,7 +17,6 @@ function buildPage() {
     header();
     my_Cards();
     searchBy();
-    hashtags();
     searchByBtn();
     signup();
     about();
