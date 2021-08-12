@@ -1,4 +1,4 @@
-export default function Header(){
+export default function Header() {
     return `
     
     <ul class='nav_bar'>
@@ -9,6 +9,7 @@ export default function Header(){
     <li class='nav_sign'>SIGN UP</li>
     <li class='nav_about'>ABOUT US</li>
     <li class='nav_contact'>CONTACT US</li>
+
 
     </ul>
 

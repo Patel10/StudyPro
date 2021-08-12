@@ -2,7 +2,7 @@ import aboutUs from './components/aboutUs';
 import Home from './components/Home';
 import Header from './components/Header';
 import HashTags from './components/hashTags';
-// import searchBy from './components/searchBy';
+import searchBy from './components/searchBy';
 import signUp from './components/signUp';
 import contactUs from './components/contactUs';
 import crud from './crud/crud';
@@ -15,7 +15,7 @@ function buildPage() {
     landHome();
     header();
     hashtags();
-    searchBy();
+    searchByBtn();
     signup();
     about();
     contact();
@@ -45,15 +45,28 @@ function hashtags() {
     });
 }
 
-function searchBy() {
+function searchByBtn() {
     const search_by = document.querySelector(".nav_search");
     search_by.addEventListener('click', () => {
         const app = document.querySelector("#app");
-        crud.getRequest('http://localhost:8080/api/searchBy', searchBy => {
-            console.log(searchBy);
-            app.innerHTML = searchByPage(searchBy)
-        })
+        app.innerHTML = searchBy(searchBy)
+        wireUpHashtagSearch();
+        // crud.getRequest('http://localhost:8080/api/searchBy', searchBy => {
+        //     console.log(searchBy);
+
+        // })
     })
+}
+
+function wireUpHashtagSearch() {
+    const nav_hash = document.querySelector("#searchByHashtag");
+    nav_hash.addEventListener('click', () => {
+        const app = document.querySelector("#app");
+        crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
+            console.log(hashtags);
+            app.innerHTML = HashTags(hashtags)
+        });
+    });
 }
 
 function signup() {
