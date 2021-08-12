@@ -15,7 +15,6 @@ buildPage();
 function buildPage() {
     landHome();
     header();
-
     my_Cards();
     searchBy();
     hashtags();
@@ -33,6 +32,10 @@ function landHome() {
        app.innerHTML = Home();
 }
 
+function contact() {
+    const app = document.querySelector("#app");
+       app.innerHTML = contactUs();
+}
 function header() {
     const nav_header = document.querySelector("#header");
     nav_header.innerHTML = Header();
