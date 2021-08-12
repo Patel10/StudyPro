@@ -3,7 +3,7 @@ export default function myCards(Cards){
 
     <ul class="tag_list">
     
-    ${Cards.map((myCards) => {
+    ${Cards.map((myCard) => {
         return `
         <li class="tag-list-id">${myCard.id}</li>
         <li class="tag-list-id">${myCard.title}</li>
