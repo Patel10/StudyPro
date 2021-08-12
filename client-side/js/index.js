@@ -1,5 +1,5 @@
 import aboutUs from './components/aboutUs';
-import Home from './components/Home';
+import home from './components/home';
 import Header from './components/Header';
 import myCards from './components/myCards';
 import HashTags from './components/hashTags';
@@ -15,10 +15,7 @@ buildPage();
 function buildPage() {
     landHome();
     header();
-
     my_Cards();
-    searchBy();
-    hashtags();
     searchByBtn();
     signup();
     about();
@@ -30,7 +27,7 @@ function buildPage() {
 
 function landHome() {
     const app = document.querySelector("#app");
-       app.innerHTML = Home();
+       app.innerHTML = home();
 }
 
 function header() {
@@ -84,9 +81,9 @@ function my_Cards(){
     const card = document.querySelector(".nav_myCards");
         card.addEventListener('click', () => {
             const app = document.querySelector("#app");
-            crud.getRequest('http://localhost:8080/api/myCards', myCards => {
-                console.log(myCards);
-                app.innerHTML = myCards();
+            crud.getRequest('http://localhost:8080/api/flashCards', Cards => {
+                console.log(Cards);
+                app.innerHTML = myCards(Cards);
             })
         })
 }
