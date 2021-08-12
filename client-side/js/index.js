@@ -7,6 +7,7 @@ import searchBy from './components/searchBy';
 import signUp from './components/signUp';
 import contactUs from './components/contactUs';
 import crud from './crud/crud';
+import flashCard from './components/flashCard';
 
 
 buildPage();
@@ -17,11 +18,11 @@ function buildPage() {
     header();
     my_Cards();
     searchBy();
-    hashtags();
     searchByBtn();
     signup();
     about();
     contact();
+    FlashCard();
 
 }
 
@@ -109,4 +110,17 @@ function contact() {
             const app = document.querySelector("#app");
             app.innerHTML = contactUs();
         })
+}
+
+function FlashCard() {
+    const card = document.querySelector(".nav_home");
+    card.addEventListener("click", () => {
+
+        const app = document.querySelector("#app");
+        crud.getRequest(`http://localhost:8080/api/flashCards/1`, currentCard => {
+            console.log(currentCard);
+            app.innerHTML = flashCard(currentCard)
+        })
+    })
+
 }
