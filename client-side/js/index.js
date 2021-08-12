@@ -6,6 +6,7 @@ import HashTags from './components/hashTags';
 import signUp from './components/signUp';
 // import ContactUs from './components/ContactUs';
 import crud from './crud/crud';
+import flashCard from './components/flashCard';
 
 
 buildPage();
@@ -19,6 +20,7 @@ function buildPage() {
     signup();
     about();
     contact();
+    FlashCard();
 
 }
 
@@ -80,4 +82,17 @@ function contact() {
         const app = document.querySelector("#app");
         app.innerHTML = ContactUs();
     })
+}
+
+function FlashCard() {
+    const card = document.querySelector(".nav_home");
+    card.addEventListener("click", () => {
+
+        const app = document.querySelector("#app");
+        crud.getRequest(`http://localhost:8080/api/flashCards/1`, currentCard => {
+            console.log(currentCard);
+            app.innerHTML = flashCard(currentCard)
+        })
+    })
+
 }

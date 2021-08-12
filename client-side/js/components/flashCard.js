@@ -1,3 +1,4 @@
+//import flashCardImg from "../..images/flashcard1.jpg";
 export default function flashCard(card){
     return `
 
@@ -6,7 +7,8 @@ export default function flashCard(card){
     <div class="flashCard-items-wrapper">
 
         <div class="flashCard-item-wrapper">
-            <div class="flashCard-img-background" style="background-image:url(images/images/flashcard1.jpg)"></div>
+            <div class="flashCard-img-background" style="background-image:url(${flashCardImg})" ></div>
+          
             <div class="img-text-wrapper">
                 <div class="logo-wrapper">
                     <img src="${card.image}">
@@ -16,5 +18,6 @@ export default function flashCard(card){
                 </div>
             </div>
         </div>
+      
     `
 }
