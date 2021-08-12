@@ -1,6 +1,7 @@
 import aboutUs from './components/aboutUs';
 import Home from './components/Home';
 import Header from './components/Header';
+import myCards from './components/myCards';
 import HashTags from './components/hashTags';
 import searchBy from './components/searchBy';
 import signUp from './components/signUp';
@@ -14,6 +15,9 @@ buildPage();
 function buildPage() {
     landHome();
     header();
+
+    my_Cards();
+    searchBy();
     hashtags();
     searchByBtn();
     signup();
@@ -34,16 +38,16 @@ function header() {
     nav_header.innerHTML = Header();
 }
 
-function hashtags() {
-    const nav_hash = document.querySelector(".nav_hashtags");
-    nav_hash.addEventListener('click', () => {
-        const app = document.querySelector("#app");
-        crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
-            console.log(hashtags);
-            app.innerHTML = HashTags(hashtags)
-        });
-    });
-}
+// function hashtags() {
+//     const nav_hash = document.querySelector(".nav_hashtags");
+//     nav_hash.addEventListener('click', () => {
+//         const app = document.querySelector("#app");
+//         crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
+//             console.log(hashtags);
+//             app.innerHTML = HashTags(hashtags)
+//         });
+//     });
+// }
 
 function searchByBtn() {
     const search_by = document.querySelector(".nav_search");
@@ -76,7 +80,16 @@ function signup() {
         app.innerHTML = signUp();
     })
 }
-
+function my_Cards(){
+    const card = document.querySelector(".nav_myCards");
+        card.addEventListener('click', () => {
+            const app = document.querySelector("#app");
+            crud.getRequest('http://localhost:8080/api/myCards', myCards => {
+                console.log(myCards);
+                app.innerHTML = myCards();
+            })
+        })
+}
 
 function about() {
     const about_us = document.querySelector(".nav_about");
