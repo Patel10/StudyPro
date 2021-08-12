@@ -1,4 +1,4 @@
-//import flashCardImg from "../..images/flashcard1.jpg";
+import flashCardImg from "../../images/flashcard1.jpg";
 export default function flashCard(card){
     return `
 
