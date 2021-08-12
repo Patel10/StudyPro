@@ -19,6 +19,7 @@ public class CardContent {
     private String note;
 
     @ManyToOne
+    @JsonIgnore
     private FlashCard flashCard;
 
 
@@ -46,11 +47,12 @@ public class CardContent {
 
     }
 
-    public CardContent(String studentName, String title, String info, String note) {
+    public CardContent(String studentName, String title, String info, String note,FlashCard flashCard) {
         this.studentName = studentName;
         this.title = title;
         this.info = info;
         this.note = note;
+        this.flashCard = flashCard;
     }
 
     @Override
