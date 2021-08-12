@@ -8,8 +8,10 @@ import parthpng from "../../images/parth.png";
 import parthjpg from "../../images/parth.jpg";
 
 
+
 export default function aboutUs(){
     return `
+    
     <div class="contain-wrapper">
             <div class="portfolio-items-wrapper">
                 <div class="portfolio-item-wrapper">
@@ -44,7 +46,7 @@ export default function aboutUs(){
                             <img src="${parthpng}">
                         </div>
                         <div class="subtitle">
-                            Parth is a front end coder, love coding and design. 
+                        A software developer looking to start a new career in IT. A dedicated team player with strong analytical skills focused on problem solving 
                         </div>
                     </div>
                 </div>
@@ -60,9 +62,12 @@ export default function aboutUs(){
                         </div>
                     </div>
                 </div>
-
-                
+    
             </div>
         </div>
+
+    
+   
+
     `
 }
