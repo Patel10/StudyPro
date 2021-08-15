@@ -13,6 +13,11 @@ body {
   grid-template-columns: 1fr;
 }
 
+#image img {
+  width: 30%;
+  height: 30%;
+
+}
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -60,6 +65,11 @@ body {
 .portfolio-items-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+.home{
+  display: grid;
+  width: 30%;
+  height: 30%;
 }
 
 .portfolio-item-wrapper {
