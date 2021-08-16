@@ -31,6 +31,13 @@ h5 {
   grid-template-columns: 1fr;
 }
 
+.image img {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 30%;
+  height: 30%;
+
+}
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -60,7 +67,14 @@ h5 {
 .active-nav-link a {
   color: black;
 }
-a {
+h2{
+  justify-content: space-between;
+  
+
+}
+
+.nav-link-wrapper a {
+  color: #8a8a8a;
   text-decoration: none;
     
 }
@@ -123,13 +137,17 @@ nav {
   transition: transform 0.5s ease-in-out;
 }
 
-.portfolio-items-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 
-  width: auto;
-  margin: 50px 40px 40px;
+.logo-wrapper{
+  position: relative;
+  width: 40%;
+  height: 40%;
+ 
+  
+  
 }
+
+
 
 .portfolio-item-wrapper {
   position: relative;
@@ -155,7 +173,7 @@ nav {
   top: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  
   align-items: center;
   height: 30%;
   text-align: center;
@@ -232,5 +250,14 @@ nav {
   border-radius: 6px;
   font-weight: bolder;
 
+
+}
+.contain-wrapper{
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
 
 }
