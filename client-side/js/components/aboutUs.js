@@ -9,9 +9,30 @@ import parthjpg from "../../images/parth.jpg";
 
 
 
-export default function aboutUs(){
+export default function aboutUs() {
     return `
-    
+    <div class="top">
+    <div class="content">
+            <h2 class="contactUs">About us </h2>
+            
+        </div>
+</div>
+    <div class="nav-link-wrapper">
+            <div class="nav-link-wrapper1">
+                    <a href="index.html">VISION</a>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                </div>
+                <div class="nav-link-wrapper2">
+                    <a href="index.html">MISSION</a>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                </div>
+    <div class="nav-link-wrapper3">
+        <a href="about.html"> OUR DEVELOPERS</a>
+     </div>
+     </div>
+
     <div class="contain-wrapper">
             <div class="portfolio-items-wrapper">
                 <div class="portfolio-item-wrapper">
@@ -21,7 +42,8 @@ export default function aboutUs(){
                             <img src="${orpaImg}">
                         </div>
                         <div class="subtitle">
-                            Orpa is a front end coder, love coding and design.
+                        Passionate Software Developer who enjoys working on both front end and back end. Adept at
+                        contributing to a collaborative team environment and finding solutions.
                         </div>
                     </div>
                 </div>
@@ -33,7 +55,7 @@ export default function aboutUs(){
                             <img src="${aminapng}">
                         </div>
                         <div class="subtitle">
-                            Amina is a back end coder, love coding and design.
+                        Creative Software Developer , with strong skills in programming and passionate about problem solving.Eager to use my skills to support IT field, in delivering programming excellence and clean code.
                         </div>
                     </div>
                 </div>
@@ -46,7 +68,7 @@ export default function aboutUs(){
                             <img src="${parthpng}">
                         </div>
                         <div class="subtitle">
-                        A software developer looking to start a new career in IT. A dedicated team player with strong analytical skills focused on problem solving 
+                        A Software Developer looking to start a new career in IT. A dedicated team player with strong analytical skills focused on problem solving 
                         </div>
                     </div>
                 </div>
@@ -58,16 +80,13 @@ export default function aboutUs(){
                             <img src="${rochellepng}">
                         </div>
                         <div class="subtitle">
-                        A software developer dedicated to working with backend technology. Extremely detailed orientated with strong analytical skills and experienced in creating management databases and maintaining billing systems.
+                        A Software Developer dedicated to working with backend technology. Extremely detailed orientated with strong analytical skills and experienced in creating management databases and maintaining billing systems.
                         </div>
                     </div>
                 </div>
     
             </div>
         </div>
-
-    
-   
 
     `
 }

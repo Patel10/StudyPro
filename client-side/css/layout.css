@@ -36,14 +36,10 @@
         /* border-radius: 10px; */
     margin-right:30px;
     margin-left: 30px;
+    vertical-align: middle;
     
  
     
-    
-    
-    
-    
-
 }
 .header li:hover {
    color: lightgray;
