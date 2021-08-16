@@ -4,6 +4,12 @@ body {
   margin: 0px;
 }
 
+.content h2{
+  font-family: 'Dancing Script', cursive;
+  color: grey;
+  font-size: 40px;
+}
+
 .study_pro{
   margin: 0;
   font-family: 'Dancing Script', cursive;
@@ -16,10 +22,10 @@ body {
 
 h5 {
   font-family: "Style Script", cursive;
-  
-  font-weight: 700;
+   font-weight: 700;
   margin-right: 250px;
 }
+
 .container {
   display: grid;
   grid-template-columns: 1fr;

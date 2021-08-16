@@ -11,6 +11,12 @@ import parthjpg from "../../images/parth.jpg";
 
 export default function aboutUs() {
     return `
+    <div class="top">
+    <div class="content">
+            <h2 class="contactUs">About us </h2>
+            
+        </div>
+</div>
     <div class="nav-link-wrapper">
             <div class="nav-link-wrapper1">
                     <a href="index.html">VISION</a>
