@@ -91,9 +91,26 @@ function my_Cards(){
             crud.getRequest('http://localhost:8080/api/flashCards', Cards => {
                 console.log(Cards);
                 app.innerHTML = myCards(Cards);
+                bind_links();
             })
         })
 }
+function bind_links(){
+    let links = document.querySelectorAll(".tag-list-title");
+    links.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            if(event.target.classList.contains("tag-list-title")){
+               let id= event.target.parentElement.querySelector(".tag-list-id").value;
+               crud.getRequest('http://localhost:8080/api/flashCards/'+id, Card => {
+                console.log(Card);
+                app.innerHTML = flashCard(Card);
+
+            })
+            }
+        })
+    })
+}
+
 
 function about() {
     const about_us = document.querySelector(".nav_about");
