@@ -4,7 +4,7 @@
     min-height: 95vh;
     width: 1200px;
     text-align: center;
-    /* background-color: rgb(228, 234, 236); */
+    background-color: rgb(228, 234, 236);
     border-radius: 12px;
 }
 #footer{
@@ -53,4 +53,49 @@
     font-family: 'Style Script', cursive;
     font-weight: 300;
     margin-right: 250px;
+}
+.testing { 
+box-sizing: border-box;
+color: rgb(255, 255, 255);
+display: block;
+flex-basis: 0px;
+flex-grow: 1;
+flex-shrink: 0;
+font-family: hurme_no2-webfont, -apple-system, BlinkMacSystemFont, sans-serif;
+font-feature-settings: "kern", "liga", "clig", "calt";
+font-kerning: normal;
+font-size: 16px;
+font-variant-ligatures: common-ligatures contextual;
+height: 352px;
+line-height: 26px;
+margin-bottom: 32px;
+margin-left: 10px;
+margin-right: 0px;
+margin-top: 32px;
+padding-left: 36.9px;
+padding-right: 4px;
+text-align: center;
+width: 1150px;
+-webkit-font-smoothing: antialiased;
+border: 10px;
+background-color: rgb(91, 113, 209);
+}
+.testing1{
+    box-sizing: border-box;
+    display: block;
+    font-size: 22px;
+    line-height: 26px;
+    margin-right: 32px;
+    text-align: center;
+
+}
+.testing2 {
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    margin-right: 32px;
+    padding-bottom: 24px;
+    padding-top: 24px;
+    text-align: left;
+
 }
