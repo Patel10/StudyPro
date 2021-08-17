@@ -32,16 +32,13 @@ export default function signUp() {
             <h2>Sign up </h2>
             <div class="inputBox">
                 <input type="text" name=" " required="required">
-                <span> Full Name </span>
+                <span> Enter your name: </span>
             </div>
             <div class="inputBox">
                 <input type="text" name=" " required="required">
-                <span> Email </span>
+                <span> Enter your grade: </span>
             </div>
-            <div class="inputBox">
-                <textarea required="required"></textarea>
-                <span> Grade </span>
-            </div>
+            
             <div class="inputBox">
                 <input type="submit" name="" value="Submit">
             </div>
