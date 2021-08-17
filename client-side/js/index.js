@@ -134,7 +134,7 @@ function FlashCard() {
     card.addEventListener("click", () => {
 
         const app = document.querySelector("#app");
-        crud.getRequest(`http://localhost:8080/api/flashCards/1`, currentCard => {
+        crud.getRequest(`http://localhost:8080/api/flashCards/4`, currentCard => {
             console.log(currentCard);
             app.innerHTML = flashCard(currentCard)
         })

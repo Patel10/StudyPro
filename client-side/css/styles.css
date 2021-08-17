@@ -1,4 +1,5 @@
 body {
+  background-color: chocolate;
 
   font-family: "Lato", sans-serif;
   margin: 0px;
@@ -139,10 +140,10 @@ nav {
 
 
 .logo-wrapper{
-  position: relative;
-  width: 40%;
-  height: 40%;
- 
+  padding-top: 2px;
+  padding-left: 20px;
+  width: 50%;
+  height: auto;
   
   
 }
@@ -208,11 +209,22 @@ nav {
   padding-right: 10px;
 
 }
+.subtitle{
+  text-align: center;
+  padding-bottom: 300px;
+  
+  
+
+}
 
 .logo-wrapper img {
+  align-items: center;
   width: 150%;
+  padding-bottom: 300px;
+  padding-top: 10%;
+  padding-left: 8.5em;
 
-  padding-top: 50%;
+  
 
 }
 
@@ -259,5 +271,7 @@ nav {
   overflow: auto;
   display: flex;
   flex-direction: column;
+  text-align: center;
+
 
 }

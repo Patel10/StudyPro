@@ -6,20 +6,13 @@ export default function flashCard(card){
     <h2> ${card.description}</h2> 
     <h2> ${card.studentName}</h2> 
     <h2> ${card.cardContents[0].info}</h2> 
-    
-    <div class="flashCard-items-wrapper">
-
-            <div class="flashCard-img-background" style="background-image:url(${flashCard1})" ></div>
-          
-            <div class="img-text-wrapper">
-                <div class="logo-wrapper">
+    <div class="logo-wrapper">
                     <img src="${card.image}">
                 </div>
                 <div class="subtitle">
                 Flash cards are an easy and interesting way for your childen recognize the world around them. Approved worldwide by child psychologists teachers and parents themselves flashcards are ideal for very young children and those up to 7 years of age.
-                </div>
-            </div>
-        </div>
+                </div>       
+    
         </div>
       
     `

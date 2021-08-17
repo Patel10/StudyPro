@@ -30,13 +30,21 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        Student student1 = new Student("Halima smith", "3");
+        Student student2 = new Student("Andrew Washington", "6");
+        Student student3 = new Student("Elijah Stewart", "9");
 
-        FlashCard flashCard1 = new FlashCard("Charles Dickens", "Elijah Stewart", "Famous english author", "https://images.unsplash.com/photo-1500995617113-cf789362a3e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80");
-        FlashCard flashCard2 = new FlashCard("Earth", "Elijah Stewart", "Earth info", "/images/images.png");
-        FlashCard flashCard3 = new FlashCard("PI", "Andrew Washington", "learn Pi get hall pass", "/images/images.png");
-        FlashCard flashCard4 = new FlashCard("Make Peanut Butter and Jelly Sandwich", "Andrew Washington", "steps for sandwich", "/images/images.png");
-        FlashCard flashCard5 = new FlashCard("Bullies", "Halima Smith", "stop bullies", "/images/images.png");
-        FlashCard flashCard6 = new FlashCard("Spelling Class", "Halima Smith", "10 words rhyme with sock", "/images/images.png");
+        studentRepo.save(student1);
+        studentRepo.save(student2);
+        studentRepo.save(student3);
+
+
+        FlashCard flashCard1 = new FlashCard("Charles Dickens", "Elijah Stewart", "Famous english author", "https://images.unsplash.com/photo-1500995617113-cf789362a3e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80", student3);
+        FlashCard flashCard2 = new FlashCard("Earth", "Elijah Stewart", "Earth info", "/images/images.png", student1);
+        FlashCard flashCard3 = new FlashCard("PI", "Andrew Washington", "learn Pi get hall pass", "/images/images.png", student2);
+        FlashCard flashCard4 = new FlashCard("Make Peanut Butter and Jelly Sandwich", "Andrew Washington", "steps for sandwich", "/images/images.png", student3);
+        FlashCard flashCard5 = new FlashCard("Bullies", "Halima Smith", "stop bullies", "/images/images.png", student1);
+        FlashCard flashCard6 = new FlashCard("Spelling Class", "Halima Smith", "10 words rhyme with sock", "/images/images.png", student2);
 
         flashCardRepo.save(flashCard1);
         flashCardRepo.save(flashCard2);
@@ -68,13 +76,6 @@ public class Populator implements CommandLineRunner {
         cardContentRepo.save(card4);
         cardContentRepo.save(card5);
         cardContentRepo.save(card6);
-        Student student1 = new Student("Halima smith", "4");
-        Student student2 = new Student("Andrew Washington", "6");
-        Student student3 = new Student("Elijah Stewart", "9");
-
-        studentRepo.save(student1);
-        studentRepo.save(student2);
-        studentRepo.save(student3);
 
 
         HashTag hashTag1 = new HashTag("Charles Dickens", "Elijah Stewart");
