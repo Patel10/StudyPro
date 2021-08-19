@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.*;
 import wcci.studyproteam.studypro.repositories.HashTagRepository;
 import wcci.studyproteam.studypro.models.FlashCard;
 import wcci.studyproteam.studypro.models.HashTag;
+import wcci.studyproteam.studypro.models.Student;
 import wcci.studyproteam.studypro.repositories.FlashCardRepository;
-
+import wcci.studyproteam.studypro.repositories.StudentRepository;
 
 import javax.annotation.Resource;
 import java.util.Collection;
@@ -23,6 +24,9 @@ public class FlashCardController {
     @Resource
     private HashTagRepository hashTagRepo;
 
+    @Resource
+    private StudentRepository studentRepo;
+
     @GetMapping("/api/flashCards")
     public Collection<FlashCard> getFlashCards() {
         return (Collection<FlashCard>) flashCardRepo.findAll();
@@ -34,22 +38,62 @@ public class FlashCardController {
     }
 
     @PostMapping("/api/flashCards/add-flashCard")
-    public FlashCard addFlashCardToFlashCard(@RequestBody String body) throws JSONException {
+    public FlashCard addFlashTitleToFlashCard(@RequestBody String body) throws JSONException {
         JSONObject newFlashCard = new JSONObject(body);
         String flashCardTitle = newFlashCard.getString("FlashCardTitle");
         FlashCard tempFlashCard = new FlashCard();
         flashCardRepo.save(tempFlashCard);
-return tempFlashCard;
+
+        return tempFlashCard;
     }
 
-//    @PostMapping("/api/flashCards/add-flashCard")
-//    public FlashCard addFlashCardToFlashCard(@RequestBody String body) throws JSONException {
-//        JSONObject newFlashCard = new JSONObject(body);
-//        String flashCardInfo = newFlashCard.getString("FlashCardInfo");
-//        FlashCard tempFlashCard = new FlashCard();
-//        flashCardRepo.save(tempFlashCard);
-//        return tempFlashCard;
-//    }
+    @PostMapping("/api/flashCards/add-flashCard")
+    public FlashCard addFlashInfoToFlashCard(@RequestBody String body) throws JSONException {
+        JSONObject newFlashCard = new JSONObject(body);
+        String flashCardInfo = newFlashCard.getString("FlashCardInfo");
+        FlashCard tempFlashCard = new FlashCard();
+        flashCardRepo.save(tempFlashCard);
+
+        return tempFlashCard;
+    }
+
+    @PostMapping("/api/flashCards/add-flashCard")
+    public FlashCard addFlashCardNameToFlashCard(@RequestBody String body) throws JSONException {
+        JSONObject newFlashCard = new JSONObject(body);
+        String flashCardName = newFlashCard.getString("FlashCardName");
+        FlashCard tempFlashCard = new FlashCard();
+        flashCardRepo.save(tempFlashCard);
+
+        return tempFlashCard;
+    }
+
+    @PostMapping("/api/flashCards/add-flashCard")
+    public FlashCard addFlashCardToFlashImg(@RequestBody String body) throws JSONException {
+        JSONObject newFlashCard = new JSONObject(body);
+        String flashCardImg = newFlashCard.getString("FlashCardImg");
+        FlashCard tempFlashCard = new FlashCard();
+        flashCardRepo.save(tempFlashCard);
+        return tempFlashCard;
+    }
+
+    @PostMapping("/api/flashCards/add-flashCard")
+    public FlashCard addFlashCardDescriptionToFlashCard(@RequestBody String body) throws JSONException {
+        JSONObject newFlashCard = new JSONObject(body);
+        String flashCardDescription = newFlashCard.getString("FlashCardDescription");
+        FlashCard tempFlashCard = new FlashCard();
+        flashCardRepo.save(tempFlashCard);
+        return tempFlashCard;
+    }
+
+    @PostMapping("/api/flashCards/add-flashCard")
+    public FlashCard addFlashCardStudentNameToFlashCard(@RequestBody String body) throws JSONException {
+        JSONObject newFlashCard = new JSONObject(body);
+        String flashCardStudentName = newFlashCard.getString("FlashCardStudentName");
+        FlashCard tempFlashCard = new FlashCard();
+        flashCardRepo.save(tempFlashCard);
+        return tempFlashCard;
+    }
+
 
     @PostMapping("/api/flashCards/{id}/add-hashtag")
     public Optional<FlashCard> addHashTagToFlashCard(@RequestBody String body, @PathVariable Long id) throws JSONException {
