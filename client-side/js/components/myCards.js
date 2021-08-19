@@ -15,13 +15,8 @@ export default function myCards(Cards) {
 
         
         
-<<<<<<< HEAD
-        `;
-    })}
-=======
         `
     }).join("")}
->>>>>>> main
     
     
     
