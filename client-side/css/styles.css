@@ -2,6 +2,7 @@
 
 
 body {
+  background-color: chocolate;
 
   font-family: "Lato", sans-serif;
   margin: 0px;
@@ -34,6 +35,13 @@ h5 {
   grid-template-columns: 1fr;
 }
 
+.image img {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 30%;
+  height: 30%;
+
+}
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -63,7 +71,14 @@ h5 {
 .active-nav-link a {
   color: black;
 }
-a {
+h2{
+  justify-content: space-between;
+  
+
+}
+
+.nav-link-wrapper a {
+  color: #8a8a8a;
   text-decoration: none;
     
 }
@@ -134,6 +149,14 @@ nav {
   width: auto;
   margin: 50px 40px 40px;
 }
+.logo-wrapper{
+  padding-top: 2px;
+  padding-left: 20px;
+  width: 50%;
+  height: auto;
+  
+  
+}
 
 .portfolio-item-wrapper {
   position: relative;
@@ -154,7 +177,7 @@ nav {
   top: 200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  
   align-items: center;
   height: 30%;
   text-align: center;
@@ -188,8 +211,16 @@ nav {
   padding-right: 10px;
 
 }
+.subtitle{
+  text-align: center;
+  padding-bottom: 300px;
+  
+  
+
+}
 
 .logo-wrapper img {
+  align-items: center;
   width: 150%;
   padding-top: 50%;
 
@@ -221,6 +252,17 @@ nav {
   margin: 8px;
   border-radius: 6px;
   font-weight: bolder;
+
+
+}
+.contain-wrapper{
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 
 
 }

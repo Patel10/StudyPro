@@ -65,11 +65,12 @@ public class FlashCard {
         return hashTags;
     }
 
-    public FlashCard(String title, String studentName, String description,String image) {
+    public FlashCard(String title, String studentName, String description,String image,Student student) {
         this.title = title;
         this.studentName = studentName;
         this.description = description;
         this.image = image;
+        this.student = student;
     }
 
     @Override

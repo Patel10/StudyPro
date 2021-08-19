@@ -1,26 +1,29 @@
-export default function myCards(Cards){
+export default function myCards(Cards) {
     return `
 
-    <ul class="tag_list">
+    <div class="tag_list">
     
     ${Cards.map((myCard) => {
         return `
-        <p class="tag-list-id">${myCard.id}</p>
-        <p class="tag-list-id">${myCard.title}</p>
-        <p class="tag-list-id">${myCard.description}</p>
-        <p class="tag-list-id">${myCard.studentName}</p>
+        <div>
+        <input type="hidden" class="tag-list-id" value="${myCard.id}"></input>
+        <p class="tag-list-title">${myCard.title}</p>
+        </div>
+       
+       
 
 
         
         
         `
-    })}
+    }).join("")}
     
     
     
     
     
     
-    </ul>
+    </div>
 
-    `}
+    `
+}
