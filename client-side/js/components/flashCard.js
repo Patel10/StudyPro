@@ -1,5 +1,9 @@
 import flashCard1 from "../../images/flashCard1.jpg";
+<<<<<<< HEAD
 export default function flashCard(card) {
+=======
+export default function flashCard(card){
+>>>>>>> main
     return `
     <div class="contain-wrapper">
     <h1> ${card.title}</h1> 
