@@ -1,5 +1,5 @@
 import aboutUs from './components/aboutUs';
-import Home from './components/Home';
+import home from './components/home';
 import Header from './components/Header';
 import HashTags from './components/hashTags';
 import searchBy from './components/searchBy';
@@ -12,30 +12,43 @@ import myCards from './components/myCards';
 
 let signInUser;
 
+var myIndex = 0;
 buildPage();
 
 
 function buildPage() {
-    landHome();
+    
     header();
     searchByBtn();
     signup();
     about();
     contact();
     newcard();
+     
     landHome();
+    makeHome();
     my_Cards();
-  
 
 }
 
 
 
 function landHome() {
-    const app = document.querySelector("#app");
-    app.innerHTML = Home();
+    const homeButton = document.querySelector(".nav_home");
+        homeButton.addEventListener('click', () => {
+            makeHome();
+        })
+       
 }
-
+function makeHome(){
+    const app = document.querySelector("#app");
+            app.innerHTML = home();
+            carousel();
+}
+function contact() {
+    const app = document.querySelector("#app");
+       app.innerHTML = contactUs();
+}
 function header() {
     const nav_header = document.querySelector("#header");
     nav_header.innerHTML = Header();
@@ -100,6 +113,7 @@ function signup() {
     signup.addEventListener('click', () => {
         const app = document.querySelector('#app');
         app.innerHTML = signUp();
+        wireUpSignIn();
     })
 }
 
@@ -151,7 +165,6 @@ function bind_links(){
 }
 
 
-
 function about() {
     const about_us = document.querySelector(".nav_about");
     about_us.addEventListener("click", () => {
@@ -166,4 +179,32 @@ function contact() {
         const app = document.querySelector("#app");
         app.innerHTML = contactUs();
     })
+
+}
+
+// let slider = function() {
+//     let slider = document.getElementById("slider");
+//     let sliderWidth = slider.offsetWidth;
+//     let slideList = document.getElementById("slideWrap");
+//     let count = 1;
+//     let items = slideList.querySelectorAll('li').length;
+    
+//     window.addEventListener('resize', function() {
+//         sliderWidth = slider.offsetWidth;
+//     })
+// }
+
+
+
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 9000); // Change image every 2 seconds
 }
