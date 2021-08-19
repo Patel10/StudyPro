@@ -42,6 +42,15 @@ public class FlashCardController {
 return tempFlashCard;
     }
 
+//    @PostMapping("/api/flashCards/add-flashCard")
+//    public FlashCard addFlashCardToFlashCard(@RequestBody String body) throws JSONException {
+//        JSONObject newFlashCard = new JSONObject(body);
+//        String flashCardInfo = newFlashCard.getString("FlashCardInfo");
+//        FlashCard tempFlashCard = new FlashCard();
+//        flashCardRepo.save(tempFlashCard);
+//        return tempFlashCard;
+//    }
+
     @PostMapping("/api/flashCards/{id}/add-hashtag")
     public Optional<FlashCard> addHashTagToFlashCard(@RequestBody String body, @PathVariable Long id) throws JSONException {
         JSONObject newHashTag = new JSONObject(body);

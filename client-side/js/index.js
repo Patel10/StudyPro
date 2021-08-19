@@ -24,7 +24,7 @@ function buildPage() {
     about();
     contact();
     newcard();
-     
+
     landHome();
     makeHome();
     my_Cards();
@@ -120,20 +120,19 @@ function signup() {
     })
 }
 
-function wireUpSignIn(){
+function wireUpSignIn() {
     const signInBtn = document.querySelector("#loginSubmit");
-    signUp.addEventListener('click',()=>{
-        const loginName =document.querySelector("#loginName")
-    crud.postRequest("", {"studentName": loginName.value},(user) => {
-        signInUser = user;
-    })
-        
+    signUp.addEventListener('click', () => {
+        const loginName = document.querySelector("#loginName")
+        crud.postRequest("", {
+            "studentName": loginName.value
+        }, (user) => {
+            signInUser = user;
+        })
+
     })
 }
 
-<<<<<<< HEAD
-function my_Cards() {
-=======
 
 function newcard() {
     const signup = document.querySelector(".nav_newCard");
@@ -143,8 +142,7 @@ function newcard() {
     })
 }
 
-function my_Cards(){
->>>>>>> main
+function my_Cards() {
     const card = document.querySelector(".nav_myCards");
     card.addEventListener('click', () => {
         const app = document.querySelector("#app");
