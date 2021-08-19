@@ -1,4 +1,4 @@
-export default function myCards(Cards){
+export default function myCards(Cards) {
     return `
 
     <ul class="tag_list">
@@ -13,7 +13,7 @@ export default function myCards(Cards){
 
         
         
-        `
+        `;
     })}
     
     
@@ -23,4 +23,5 @@ export default function myCards(Cards){
     
     </ul>
 
-    `}
+    `
+}

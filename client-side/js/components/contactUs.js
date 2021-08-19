@@ -8,7 +8,7 @@ export default function contactUs() {
     return `
     <div class="top">
     <div class="top1">
-        <p class="pClass">Contact Us</p>
+        <p>Contact Us</p>
         <div class="home">
            
         </div>
@@ -19,11 +19,11 @@ export default function contactUs() {
     <div class="box">
         <img src="${bookstack}" alt="contactdesign" style="width:100%">
     </div>
-
     <div class="box">
 
         <div class="box1">
             <div class="logo1">
+
                 <a href="https://goo.gl/maps/TJSgjuizcgGXRgbv9">
                     <img src="${address}" alt="addresslogo" class="logo"> Barnes & Noble</a>
             </div>
@@ -33,8 +33,9 @@ export default function contactUs() {
             </div>
             <div class="logo3">
                 <a href="tel:1110001010">
-                    <img src="${phonepng}" alt="phonelogo" class="logo"> 614-000-1010</a>
+                    <img src="${address}" alt="phonelogo" class="logo"> 614-000-1010</a>
             </div>
+
             <div class="logo4">
                 <a href="https://www.facebook.com/">
                     <img src="${facebook}" alt="facebooklogo" class="logo">find us on facebook</a>
