@@ -211,7 +211,7 @@ nav {
 }
 .subtitle{
   text-align: center;
-  padding-bottom: 300px;
+  padding-bottom: 10px;
   
   
 
@@ -220,7 +220,7 @@ nav {
 .logo-wrapper img {
   align-items: center;
   width: 150%;
-  padding-bottom: 300px;
+  padding-bottom: 10px;
   padding-top: 10%;
   padding-left: 8.5em;
 
@@ -272,6 +272,7 @@ nav {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-content: flex-start;
 
 
 }

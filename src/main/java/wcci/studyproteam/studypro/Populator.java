@@ -40,11 +40,11 @@ public class Populator implements CommandLineRunner {
 
 
         FlashCard flashCard1 = new FlashCard("Charles Dickens", "Elijah Stewart", "Famous english author", "https://images.unsplash.com/photo-1500995617113-cf789362a3e1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80", student3);
-        FlashCard flashCard2 = new FlashCard("Earth", "Elijah Stewart", "Earth info", "/images/images.png", student1);
-        FlashCard flashCard3 = new FlashCard("PI", "Andrew Washington", "learn Pi get hall pass", "/images/images.png", student2);
-        FlashCard flashCard4 = new FlashCard("Make Peanut Butter and Jelly Sandwich", "Andrew Washington", "steps for sandwich", "/images/images.png", student3);
-        FlashCard flashCard5 = new FlashCard("Bullies", "Halima Smith", "stop bullies", "/images/images.png", student1);
-        FlashCard flashCard6 = new FlashCard("Spelling Class", "Halima Smith", "10 words rhyme with sock", "/images/images.png", student2);
+        FlashCard flashCard2 = new FlashCard("Earth", "Elijah Stewart", "Earth info", "https://images.unsplash.com/photo-1462331321792-cc44368b8894?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=822&q=80", student1);
+        FlashCard flashCard3 = new FlashCard("PI", "Andrew Washington", "learn Pi get hall pass", "https://images.unsplash.com/photo-1604608619749-7dc84887834f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=697&q=80", student2);
+        FlashCard flashCard4 = new FlashCard("Make Peanut Butter and Jelly Sandwich", "Andrew Washington", "steps for sandwich", "https://images.unsplash.com/photo-1536598671674-27bfb96e07ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80", student3);
+        FlashCard flashCard5 = new FlashCard("Bullies", "Halima Smith", "stop bullies", "https://images.unsplash.com/photo-1600433805982-4ceb4ccdcb26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=751&q=80", student1);
+        FlashCard flashCard6 = new FlashCard("Spelling Class", "Halima Smith", "10 words rhyme with sock", "https://images.unsplash.com/photo-1504542982118-59308b40fe0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80", student2);
 
         flashCardRepo.save(flashCard1);
         flashCardRepo.save(flashCard2);

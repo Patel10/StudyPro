@@ -8,6 +8,8 @@ import signUp from './components/signUp';
 import contactUs from './components/contactUs';
 import crud from './crud/crud';
 import flashCard from './components/flashCard';
+import HashTagForm from './components/hashTagForm';
+import StudentNameForm from './components/studentNameForm';
 
 
 buildPage();
@@ -59,6 +61,7 @@ function searchByBtn() {
         const app = document.querySelector("#app");
         app.innerHTML = searchBy(searchBy)
         wireUpHashtagSearch();
+        wireUpStudentNameSearch();
         // crud.getRequest('http://localhost:8080/api/searchBy', searchBy => {
         //     console.log(searchBy);
 
@@ -67,13 +70,28 @@ function searchByBtn() {
 }
 
 function wireUpHashtagSearch() {
-    const nav_hash = document.querySelector("#searchByHashtag");
+    const nav_hash = document.querySelector(".searchByHashtag");
     nav_hash.addEventListener('click', () => {
-        const app = document.querySelector("#app");
-        crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
-            console.log(hashtags);
-            app.innerHTML = HashTags(hashtags)
-        });
+       // const app = document.querySelector("#app");
+       // crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
+          //  console.log(hashtags);
+           // app.innerHTML = HashTags(hashtags)
+      //  });
+      const form = document.querySelector('.form');
+      form.innerHTML =  HashTagForm();
+     
+    });
+}
+function wireUpStudentNameSearch() {
+    const nav_student = document.querySelector(".searchByStudentName");
+    nav_student.addEventListener('click', () => {
+       // const app = document.querySelector("#app");
+       // crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
+          //  console.log(hashtags);
+           // app.innerHTML = HashTags(hashtags)
+      //  });
+     const form = document.querySelector('.form');
+     form.innerHTML = StudentNameForm();
     });
 }
 

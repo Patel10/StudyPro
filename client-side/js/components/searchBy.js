@@ -1,10 +1,11 @@
 export default function searchBy() {
     return `
 
-    <button id="searchByHashtag">HashTags"</button>
-    <button id="searchByHashtag">Student Name</button>
-    <button id="searchByHashtag">Flash Card Title</button>
-    <button id="searchByHashtag">Grade</button>
+    <button class="searchByHashtag">HashTags</button>
+    <button class="searchByStudentName">Student Name</button>
+    <button class="searchByFlashCard">Flash Card Title</button>
+    <button class="searchByGrade">Grade</button>
+    <div class="form"></div>
     
     `;
 
