@@ -99,3 +99,48 @@ background-color: rgb(91, 113, 209);
     text-align: left;
 
 }
+.mySlides{
+    width: 300px;
+    height: 300px;
+}
+/* #slider{
+    position: relative;
+    width:500px;
+    height: 256px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(red, green, blue, alpha);
+}
+#slider ul {
+    position: relative;
+    list-style: none;
+    height: 100%;
+    width: 1000%;
+    left: 0;
+
+}
+#slider ul li {
+    position: relative;
+    height: 100%;
+    float: left;
+}
+#slider ul li img {
+    width: 400px;
+    height: 250px;;
+} */
+#slideshow {
+    margin: 0px auto;
+    position: relative;
+    width: 700px;
+    height: 700px;
+    padding: 10px;
+    margin-left: 35%;
+   
+    
+}
+#slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+} 

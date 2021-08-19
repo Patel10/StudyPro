@@ -19,17 +19,17 @@ export default function aboutUs() {
 </div>
     <div class="nav-link-wrapper">
             <div class="nav-link-wrapper1">
-                    <a href="index.html">VISION</a>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h2 class="visionMission">VISION</h2>
+                    <p> Our vision is to empower students to acquire, demonstrate, articulate and value knowledge and skills that will support them, as life-long learners.</p>
 
                 </div>
                 <div class="nav-link-wrapper2">
-                    <a href="index.html">MISSION</a>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <h2 class="visionMission" >MISSION</h2>
+                    <p> To bring inspiration and innovation to every student.</p>
 
                 </div>
     <div class="nav-link-wrapper3">
-        <a href="about.html"> OUR DEVELOPERS</a>
+        <h2 class="visionMission"> OUR DEVELOPERS</h2>
      </div>
      </div>
 

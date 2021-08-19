@@ -14,6 +14,5 @@ export default function flashCard(card){
                 </div>       
     
         </div>
-      
     `
 }

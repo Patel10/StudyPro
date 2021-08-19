@@ -30,6 +30,19 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        HashTag hashTag1 = new HashTag("Charles Dickens", "Elijah Stewart");
+        HashTag hashTag2 = new HashTag("Earth", "Elijah Stewart");
+        HashTag hashTag3 = new HashTag("PI", "Andrew Washington");
+        HashTag hashTag4 = new HashTag("Make Peanut Butter and Jelly Sandwich", "Andrew Washington");
+        HashTag hashTag5 = new HashTag("Bullies", "Halima Smith");
+        HashTag hashTag6 = new HashTag("Spelling Class", "Halima Smith");
+
+        hashTagRepo.save(hashTag1);
+        hashTagRepo.save(hashTag2);
+        hashTagRepo.save(hashTag3);
+        hashTagRepo.save(hashTag4);
+        hashTagRepo.save(hashTag5);
+        hashTagRepo.save(hashTag6);
         Student student1 = new Student("Halima smith", "3");
         Student student2 = new Student("Andrew Washington", "6");
         Student student3 = new Student("Elijah Stewart", "9");
@@ -45,6 +58,14 @@ public class Populator implements CommandLineRunner {
         FlashCard flashCard4 = new FlashCard("Make Peanut Butter and Jelly Sandwich", "Andrew Washington", "steps for sandwich", "https://images.unsplash.com/photo-1536598671674-27bfb96e07ff?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=751&q=80", student3);
         FlashCard flashCard5 = new FlashCard("Bullies", "Halima Smith", "stop bullies", "https://images.unsplash.com/photo-1600433805982-4ceb4ccdcb26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=751&q=80", student1);
         FlashCard flashCard6 = new FlashCard("Spelling Class", "Halima Smith", "10 words rhyme with sock", "https://images.unsplash.com/photo-1504542982118-59308b40fe0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80", student2);
+
+        flashCard1.addHashTag(hashTag1);
+        flashCard1.addHashTag(hashTag2);
+        flashCard1.addHashTag(hashTag3);
+        flashCard1.addHashTag(hashTag4);
+        flashCard1.addHashTag(hashTag5);
+        flashCard1.addHashTag(hashTag6);
+
 
         flashCardRepo.save(flashCard1);
         flashCardRepo.save(flashCard2);
@@ -77,20 +98,6 @@ public class Populator implements CommandLineRunner {
         cardContentRepo.save(card5);
         cardContentRepo.save(card6);
 
-
-        HashTag hashTag1 = new HashTag("Charles Dickens", "Elijah Stewart");
-        HashTag hashTag2 = new HashTag("Earth", "Elijah Stewart");
-        HashTag hashTag3 = new HashTag("PI", "Andrew Washington");
-        HashTag hashTag4 = new HashTag("Make Peanut Butter and Jelly Sandwich", "Andrew Washington");
-        HashTag hashTag5 = new HashTag("Bullies", "Halima Smith");
-        HashTag hashTag6 = new HashTag("Spelling Class", "Halima Smith");
-
-        hashTagRepo.save(hashTag1);
-        hashTagRepo.save(hashTag2);
-        hashTagRepo.save(hashTag3);
-        hashTagRepo.save(hashTag4);
-        hashTagRepo.save(hashTag5);
-        hashTagRepo.save(hashTag6);
 
     }
 }

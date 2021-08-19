@@ -34,7 +34,6 @@ export default function contactUs() {
     <a href="https://www.facebook.com/">
         <img src="${facebook}" alt="facebooklogo" class="logo">find us on facebook</a>
 
-
 </div>
     </div>
 
@@ -63,7 +62,6 @@ export default function contactUs() {
     </div>
     </div>
 </div>
-
 
     `
 }
