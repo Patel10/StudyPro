@@ -1,33 +1,49 @@
 import aboutUs from './components/aboutUs';
-import Home from './components/Home';
+import home from './components/home';
 import Header from './components/Header';
 import HashTags from './components/hashTags';
 import searchBy from './components/searchBy';
 import signUp from './components/signUp';
-// import ContactUs from './components/ContactUs';
+import contactUs from './components/contactUs';
 import crud from './crud/crud';
+import myCards from './components/myCards';
+import flashCard from './components/flashCard';
 
-
+var myIndex = 0;
 buildPage();
 
 
 function buildPage() {
-    landHome();
+    
     header();
     searchByBtn();
     signup();
     about();
     contact();
+    landHome();
+    makeHome();
+    my_Cards();
 
 }
 
 
 
 function landHome() {
-    const app = document.querySelector("#app");
-    app.innerHTML = Home();
+    const homeButton = document.querySelector(".nav_home");
+        homeButton.addEventListener('click', () => {
+            makeHome();
+        })
+       
 }
-
+function makeHome(){
+    const app = document.querySelector("#app");
+            app.innerHTML = home();
+            carousel();
+}
+function contact() {
+    const app = document.querySelector("#app");
+       app.innerHTML = contactUs();
+}
 function header() {
     const nav_header = document.querySelector("#header");
     nav_header.innerHTML = Header();
@@ -94,8 +110,6 @@ function signup() {
         app.innerHTML = signUp();
     })
 }
-<<<<<<< HEAD
-=======
 function my_Cards(){
     const card = document.querySelector(".nav_myCards");
         card.addEventListener('click', () => {
@@ -123,13 +137,12 @@ function bind_links(){
     })
 }
 
->>>>>>> main
 
 function about() {
     const about_us = document.querySelector(".nav_about");
     about_us.addEventListener("click", () => {
         const app = document.querySelector("#app");
-        app.innerHTML = AboutUs();
+        app.innerHTML = aboutUs();
     })
 }
 
@@ -137,13 +150,34 @@ function contact() {
     const contact_us = document.querySelector(".nav_contact");
     contact_us.addEventListener("click", () => {
         const app = document.querySelector("#app");
-<<<<<<< HEAD
-        app.innerHTML = ContactUs();
-=======
-        crud.getRequest(`http://localhost:8080/api/flashCards/4`, currentCard => {
-            console.log(currentCard);
-            app.innerHTML = flashCard(currentCard)
-        })
->>>>>>> main
+        app.innerHTML = contactUs();
     })
+
+}
+
+// let slider = function() {
+//     let slider = document.getElementById("slider");
+//     let sliderWidth = slider.offsetWidth;
+//     let slideList = document.getElementById("slideWrap");
+//     let count = 1;
+//     let items = slideList.querySelectorAll('li').length;
+    
+//     window.addEventListener('resize', function() {
+//         sliderWidth = slider.offsetWidth;
+//     })
+// }
+
+
+
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 9000); // Change image every 2 seconds
 }

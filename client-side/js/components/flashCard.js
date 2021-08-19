@@ -1,25 +1,7 @@
-<<<<<<< HEAD
-export default function flashCard(card) {
-=======
 import flashCard1 from "../../images/flashCard1.jpg";
 export default function flashCard(card){
->>>>>>> main
     return `
     <div class="contain-wrapper">
-<<<<<<< HEAD
-    <div class="flashCard-items-wrapper">
-
-        <div class="flashCard-item-wrapper">
-            <div class="flashCard-img-background" style="background-image:url(images/images/flashcard1.jpg)"></div>
-            <div class="img-text-wrapper">
-                <div class="logo-wrapper">
-                    <img src="${card.image}">
-                </div>
-                <div class="subtitle">
-                Flash cards are an easy and interesting way for your children recognize the world around them. Approved worldwide by child psychologists teachers and parents themselves flashcards are ideal for very young children and those up to 7 years of age.
-                </div>
-            </div>
-=======
     <h1> ${card.title}</h1> 
     <h2> ${card.description}</h2> 
     <h2> ${card.studentName}</h2> 
@@ -31,7 +13,6 @@ export default function flashCard(card){
                 Flash cards are an easy and interesting way for your childen recognize the world around them. Approved worldwide by child psychologists teachers and parents themselves flashcards are ideal for very young children and those up to 7 years of age.
                 </div>       
     
->>>>>>> main
         </div>
     `
 }
