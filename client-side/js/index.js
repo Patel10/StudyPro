@@ -9,7 +9,7 @@ import contactUs from './components/contactUs';
 import crud from './crud/crud';
 import flashCard from './components/flashCard';
 
-
+var myIndex = 0;
 buildPage();
 
 
@@ -23,16 +23,24 @@ function buildPage() {
     contact();
     landHome();
     FlashCard();
+    makeHome();
 
 }
 
 
 
 function landHome() {
-    const app = document.querySelector("#app");
-       app.innerHTML = home();
+    const homeButton = document.querySelector(".nav_home");
+        homeButton.addEventListener('click', () => {
+            makeHome();
+        })
+       
 }
-
+function makeHome(){
+    const app = document.querySelector("#app");
+            app.innerHTML = home();
+            carousel();
+}
 function contact() {
     const app = document.querySelector("#app");
        app.innerHTML = contactUs();
@@ -140,4 +148,31 @@ function FlashCard() {
         })
     })
 
+}
+
+// let slider = function() {
+//     let slider = document.getElementById("slider");
+//     let sliderWidth = slider.offsetWidth;
+//     let slideList = document.getElementById("slideWrap");
+//     let count = 1;
+//     let items = slideList.querySelectorAll('li').length;
+    
+//     window.addEventListener('resize', function() {
+//         sliderWidth = slider.offsetWidth;
+//     })
+// }
+
+
+
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 9000); // Change image every 2 seconds
 }
