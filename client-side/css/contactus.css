@@ -1,4 +1,4 @@
-
+/* about us styling */
 
 .pClass {
     margin: 0;
@@ -9,7 +9,19 @@
     color: white;
     text-align: center;
   }
-  
+  .visionMission{
+    font-size: 20px;
+    color: black;
+  }
+.nav-link-wrapper .nav-link-wrapper1 h2:hover{
+
+  color: black;
+  font-size: larger;
+  font-weight: 600;
+  transition-duration: 5s; 
+  transition: transform 0.5s ease-in-out;
+}
+ 
   .home a {
     float: right;
     padding: 30px;
@@ -46,6 +58,7 @@
     text-align: left;
     margin-top: 40px;
     margin-left: 30px;
+    height: 400px;
     
   }
 
@@ -74,15 +87,19 @@
   }
   
   .contactForm {
-    width: 40%;
-   
+    width: 50%;
     background: white;
+    border: lightblue solid 2px;
+   text-align: center;
+   padding: 20px;
+   
 }
 
 .contactForm h2 {
     font-size: 30px;
     color: #333;
     font-weight: 500;
+    font-family: 'Dancing Script', cursive; ;
 }
 
 .contactForm .inputBox {
@@ -135,6 +152,265 @@ padding: 10px;
 font-size:18px;
 }
 
+
+
+
+/* Login form */
+
+.container{
+  position: relative;
+  max-width: 850px;
+  width: 100%;
+  background: #fff;
+  padding: 40px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  perspective: 2700px;
+   display: inline-block;
+   margin: 40px;
+}
+.container .cover{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  text-align: start;
+}
+
+.container .cover::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: lightblue;
+  opacity: 0.5;
+  /* z-index: 20; */
+  /* transform: rotateY(180deg); */
+}
+.container #flip:checked ~ .cover{
+  transform: rotateY(-180deg);
+}
+
+.container .forms{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.container .form-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-content .login-form,
+.form-content .signup-form{
+  width: calc(90% / 2 - 50px);
+}
+.forms .form-content .title{
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.forms .form-content .input-boxes{
+  margin-top: 30px;
+}
+.forms .form-content .input-box{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+.form-content .input-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.form-content .input-box input:focus,
+.form-content .input-box input:valid{
+  border-color: lightsalmon;
+}
+.form-content .input-box i{
+  position: absolute;
+  color: black;
+  font-size: 17px;
+}
+.forms .form-content .text{
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+}
+.forms .form-content .text a{
+  text-decoration: none;
+}
+.forms .form-content .text a:hover{
+  text-decoration: underline;
+}
+.forms .form-content .button{
+  color: #fff;
+  margin-top: 40px;
+}
+.forms .form-content .button input{
+  color: #fff;
+  background: lightsalmon;
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.forms .form-content .button input:hover{
+  background: lightsalmon;
+}
+.forms .form-content label{
+  color: lightsalmon;
+  cursor: pointer;
+}
+.forms .form-content label:hover{
+  text-decoration: underline;
+}
+.forms .form-content .login-text,
+.forms .form-content .sign-up-text{
+  text-align: center;
+  margin-top: 25px;
+}
+.container #flip{
+  display: none;
+}
+@media (max-width: 730px) {
+  .container .cover{
+    display: none;
+  }
+  .form-content .login-form,
+  .form-content .signup-form{
+    width: 100%;
+  }
+  .form-content .signup-form{
+    display: none;
+  }
+  .container #flip:checked ~ .forms .signup-form{
+    display: block;
+  }
+  .container #flip:checked ~ .forms .login-form{
+    display: none;
+  }
+}
+
+.signUpForm .inputBox input:focus~span,
+.signUpForm .inputBox input:valid~span,
+.signUpForm .inputBox textarea:focus~span,
+.signUpForm .inputBox textarea:valid~span
+{
+color: #e91e63;
+font-size: 12px;
+transform: translateY(-20px);
+}
+
+.signUpForm .inputBox input[type="submit"]
+{
+width:100px;
+background: #00bcd4;
+color: #fff;
+border: none;
+cursor: pointer;
+padding: 10px;
+font-size:18px;
+}
+
+.box {
+  flex: 50%;
+  padding: 20px;
+   box-shadow: 11px 10px 5px -4px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: 11px 10px 5px -4px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 11px 10px 5px -4px rgba(0, 0, 0, 0.53);
+  text-align: left;
+  margin-top: 40px;
+  margin-left: 30px;
+  
+}
+
+/* newCard styling */
+
+.newCardForm {
+  width: 50%;
+  display: inline-block;
+  background: white;
+  border-color: #e91e63;
+  border: lightblue solid 1px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.newCardForm h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+}
+
+.newCardForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.newCardForm .inputBox input,
+.newCardForm .inputBox textarea
+{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.newCardForm .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size:16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666
+}
+
+.newCardForm .inputBox input:focus~span,
+.newCardForm .inputBox input:valid~span,
+.newCardForm .inputBox textarea:focus~span,
+.newCardForm .inputBox textarea:valid~span
+{
+color: #e91e63;
+font-size: 12px;
+transform: translateY(-20px);
+}
+
+.newCardForm .inputBox input[type="submit"]
+{
+width:100px;
+background: #00bcd4;
+color: #fff;
+border: none;
+cursor: pointer;
+padding: 10px;
+font-size:18px;
+}
+
 @media (max-width:991px){
     .contact {
         padding: 50px; 
@@ -154,3 +430,4 @@ font-size:18px;
       background-color: lightblue;
     }
 }
+

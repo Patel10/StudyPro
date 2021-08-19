@@ -6,8 +6,11 @@ import searchBy from './components/searchBy';
 import signUp from './components/signUp';
 import contactUs from './components/contactUs';
 import crud from './crud/crud';
-import myCards from './components/myCards';
 import flashCard from './components/flashCard';
+import newCard from './components/newCard';
+import myCards from './components/myCards';
+
+let signInUser;
 
 var myIndex = 0;
 buildPage();
@@ -20,6 +23,8 @@ function buildPage() {
     signup();
     about();
     contact();
+    newcard();
+     
     landHome();
     makeHome();
     my_Cards();
@@ -108,8 +113,30 @@ function signup() {
     signup.addEventListener('click', () => {
         const app = document.querySelector('#app');
         app.innerHTML = signUp();
+        wireUpSignIn();
     })
 }
+
+function wireUpSignIn(){
+    const signInBtn = document.querySelector("#loginSubmit");
+    signUp.addEventListener('click',()=>{
+        const loginName =document.querySelector("#loginName")
+    crud.postRequest("", {"studentName": loginName.value},(user) => {
+        signInUser = user;
+    })
+        
+    })
+}
+
+
+function newcard() {
+    const signup = document.querySelector(".nav_newCard");
+    signup.addEventListener('click', () => {
+        const app = document.querySelector('#app');
+        app.innerHTML = newCard();
+    })
+}
+
 function my_Cards(){
     const card = document.querySelector(".nav_myCards");
         card.addEventListener('click', () => {

@@ -1,6 +1,8 @@
+/* header styling */
+
+
 body {
   background-color: chocolate;
-
   font-family: "Lato", sans-serif;
   margin: 0px;
 }
@@ -9,6 +11,10 @@ body {
   font-family: 'Dancing Script', cursive;
   color: grey;
   font-size: 40px;
+  padding: 10px;
+}
+.content p{
+  padding: 15px;
 }
 
 .study_pro{
@@ -18,7 +24,7 @@ body {
   line-height: 60px;
   padding-left: 20px;
   color: white;
-  margin-right: 250px;
+  margin-right: 75px;
 }
 
 h5 {
@@ -139,6 +145,13 @@ nav {
 }
 
 
+/*  portfolio - about us styling */
+.portfolio-items-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: auto;
+  margin: 50px 40px 40px;
+}
 .logo-wrapper{
   padding-top: 2px;
   padding-left: 20px;
@@ -148,14 +161,9 @@ nav {
   
 }
 
-
-
 .portfolio-item-wrapper {
   position: relative;
-
 }
-
-
 
 .portfolio-img-background {
   background-size: 50%;
@@ -165,8 +173,6 @@ nav {
   background-position: center center;
   background-repeat: no-repeat;
 }
-
-
 
 .img-text-wrapper {
   transition: 1s;
@@ -202,7 +208,6 @@ nav {
 }
 
 .img-text-wrapper:hover .subtitle {
-
   color: white;
   font-weight: 500;
   padding-left: 10px;
@@ -213,32 +218,17 @@ nav {
   text-align: center;
   padding-bottom: 300px;
   
-  
-
 }
 
 .logo-wrapper img {
   align-items: center;
   width: 150%;
-  padding-bottom: 300px;
-  padding-top: 10%;
-  padding-left: 8.5em;
-
-  
-
+  padding-top: 50%;
 }
 
 .two-column-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.profile-image-wrapper img {
-  width: 100%;
-}
-
-.profile-content-wrapper {
-  padding: 30px;
 }
 
 
@@ -252,7 +242,6 @@ nav {
   align-items: center;
   text-align: center;
   list-style-type: none;
-
 }
 
 #searchByHashtag {
@@ -261,7 +250,6 @@ nav {
   margin: 8px;
   border-radius: 6px;
   font-weight: bolder;
-
 
 }
 .contain-wrapper{
@@ -272,6 +260,5 @@ nav {
   display: flex;
   flex-direction: column;
   text-align: center;
-
 
 }
