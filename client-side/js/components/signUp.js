@@ -1,55 +1,67 @@
-import bookstack from "../../images/books-stack.jpg";
-import facebook from "../../images/fb-logo.jpg";
-import address from "../../images/address.png";
-import emailpng from "../../images/email.png";
-import phonepng from "../../images/phone.jpg";
-
 export default function signUp() {
     return `
-   
-
-<div class="head">
-    <div class="box">
-        <div class="contactForm">
-            <form> 
-            <h2>Log in </h2>
-                <div class="inputBox">
-                <input type="text" name=" " required="required">
-                <span> Enter your name </span>
-                </div>
-                
-            <div class="inputBox">
-            <input type="submit" name="" value="Submit">
-            </div>
-                         </form>
-    
+       <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">   
+      </div>
+      <div class="back">
+  
+             </div>
     </div>
-    </div>
-    <div class="box">
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+          <form action="#">
+            <div class="input-boxes">
 
-              <div class="contactForm">
-        <form> 
-            <h2>Sign up </h2>
-            <div class="inputBox">
-                <input type="text" name=" " required="required">
-                <span> Full Name </span>
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" id="loginName" placeholder="Enter your username" required>
+              </div>
+                            
+              <div class="button input-box">
+                <input type="submit" id="loginSubmit" value="Submit">
+              </div>
+
+              <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
             </div>
-            <div class="inputBox">
-                <input type="text" name=" " required="required">
-                <span> Email </span>
-            </div>
-            <div class="inputBox">
-                <textarea required="required"></textarea>
-                <span> Grade </span>
-            </div>
-            <div class="inputBox">
-                <input type="submit" name="" value="Submit">
-            </div>
-            
+
         </form>
+      </div>
+
+        <div class="signup-form">
+          <div class="title">Signup</div>
+        <form action="#">
+            <div class="input-boxes">
+
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" id="userName" placeholder="Enter new username" required>
+              </div>
+
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" id="yourName" placeholder="Enter your name" required>
+              </div>
+
+              <div class="input-box">
+               <i class="fas fa-book"></i>
+               <input type="text" id="yourGrade" placeholder="Enter your grade" required>
+                </div>
+              
+              <div class="button input-box">
+                <input type="submit" id="signUpSubmit" value="Submit">
+              </div>
+              
+              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+      </form>
     </div>
     </div>
-</div>
+    </div>
+  </div>
 
 
     `
