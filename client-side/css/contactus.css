@@ -58,6 +58,7 @@
     text-align: left;
     margin-top: 40px;
     margin-left: 30px;
+    height: 400px;
     
   }
 
@@ -86,15 +87,19 @@
   }
   
   .contactForm {
-    width: 40%;
-   
+    width: 50%;
     background: white;
+    border: lightblue solid 2px;
+   text-align: center;
+   padding: 20px;
+   
 }
 
 .contactForm h2 {
     font-size: 30px;
     color: #333;
     font-weight: 500;
+    font-family: 'Dancing Script', cursive; ;
 }
 
 .contactForm .inputBox {
@@ -150,7 +155,6 @@ font-size:18px;
 
 
 
-
 /* Login form */
 
 .container{
@@ -162,6 +166,7 @@ font-size:18px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   perspective: 2700px;
    display: inline-block;
+   margin: 40px;
 }
 .container .cover{
   position: absolute;
@@ -210,7 +215,6 @@ font-size:18px;
   font-weight: 500;
   color: #333;
 }
-
 
 .forms .form-content .input-boxes{
   margin-top: 30px;
@@ -304,7 +308,6 @@ font-size:18px;
   }
 }
 
-
 .signUpForm .inputBox input:focus~span,
 .signUpForm .inputBox input:valid~span,
 .signUpForm .inputBox textarea:focus~span,
@@ -338,7 +341,6 @@ font-size:18px;
   
 }
 
-
 /* newCard styling */
 
 .newCardForm {
@@ -348,6 +350,7 @@ font-size:18px;
   border-color: #e91e63;
   border: lightblue solid 1px;
   padding: 10px;
+  margin-top: 20px;
 }
 
 .newCardForm h2 {
@@ -408,7 +411,6 @@ padding: 10px;
 font-size:18px;
 }
 
-
 @media (max-width:991px){
     .contact {
         padding: 50px; 
@@ -428,3 +430,4 @@ font-size:18px;
       background-color: lightblue;
     }
 }
+

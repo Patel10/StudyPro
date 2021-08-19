@@ -4,11 +4,13 @@ import Header from './components/Header';
 import HashTags from './components/hashTags';
 import searchBy from './components/searchBy';
 import signUp from './components/signUp';
-// import ContactUs from './components/ContactUs';
+import contactUs from './components/contactUs';
 import crud from './crud/crud';
 import flashCard from './components/flashCard';
 import newCard from './components/newCard';
+import myCards from './components/myCards';
 
+let signInUser;
 
 buildPage();
 
@@ -22,7 +24,8 @@ function buildPage() {
     contact();
     newcard();
     landHome();
-    FlashCard();
+    my_Cards();
+  
 
 }
 
@@ -100,6 +103,17 @@ function signup() {
     })
 }
 
+function wireUpSignIn(){
+    const signInBtn = document.querySelector("#loginSubmit");
+    signUp.addEventListener('click',()=>{
+        const loginName =document.querySelector("#loginName")
+    crud.postRequest("", {"studentName": loginName.value},(user) => {
+        signInUser = user;
+    })
+        
+    })
+}
+
 
 function newcard() {
     const signup = document.querySelector(".nav_newCard");
@@ -142,7 +156,7 @@ function about() {
     const about_us = document.querySelector(".nav_about");
     about_us.addEventListener("click", () => {
         const app = document.querySelector("#app");
-        app.innerHTML = AboutUs();
+        app.innerHTML = aboutUs();
     })
 }
 
@@ -150,6 +164,6 @@ function contact() {
     const contact_us = document.querySelector(".nav_contact");
     contact_us.addEventListener("click", () => {
         const app = document.querySelector("#app");
-        app.innerHTML = ContactUs();
+        app.innerHTML = contactUs();
     })
 }

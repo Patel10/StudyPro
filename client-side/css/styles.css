@@ -3,7 +3,6 @@
 
 body {
   background-color: chocolate;
-
   font-family: "Lato", sans-serif;
   margin: 0px;
 }
@@ -12,6 +11,10 @@ body {
   font-family: 'Dancing Script', cursive;
   color: grey;
   font-size: 40px;
+  padding: 10px;
+}
+.content p{
+  padding: 15px;
 }
 
 .study_pro{
@@ -215,22 +218,18 @@ nav {
   text-align: center;
   padding-bottom: 300px;
   
-  
-
 }
 
 .logo-wrapper img {
   align-items: center;
   width: 150%;
   padding-top: 50%;
-
 }
 
 .two-column-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
 
 
 /* ------------------------------------- */
@@ -243,7 +242,6 @@ nav {
   align-items: center;
   text-align: center;
   list-style-type: none;
-
 }
 
 #searchByHashtag {
@@ -252,7 +250,6 @@ nav {
   margin: 8px;
   border-radius: 6px;
   font-weight: bolder;
-
 
 }
 .contain-wrapper{
@@ -263,6 +260,5 @@ nav {
   display: flex;
   flex-direction: column;
   text-align: center;
-
 
 }
