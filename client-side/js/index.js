@@ -17,14 +17,14 @@ buildPage();
 
 
 function buildPage() {
-    
+
     header();
     searchByBtn();
     signup();
     about();
     contact();
     newcard();
-     
+
     landHome();
     makeHome();
     my_Cards();
@@ -35,20 +35,23 @@ function buildPage() {
 
 function landHome() {
     const homeButton = document.querySelector(".nav_home");
-        homeButton.addEventListener('click', () => {
-            makeHome();
-        })
-       
+    homeButton.addEventListener('click', () => {
+        makeHome();
+    })
+
 }
-function makeHome(){
+
+function makeHome() {
     const app = document.querySelector("#app");
-            app.innerHTML = home();
-            carousel();
+    app.innerHTML = home();
+    carousel();
 }
+
 function contact() {
     const app = document.querySelector("#app");
-       app.innerHTML = contactUs();
+    app.innerHTML = contactUs();
 }
+
 function header() {
     const nav_header = document.querySelector("#header");
     nav_header.innerHTML = Header();
@@ -117,14 +120,16 @@ function signup() {
     })
 }
 
-function wireUpSignIn(){
+function wireUpSignIn() {
     const signInBtn = document.querySelector("#loginSubmit");
-    signUp.addEventListener('click',()=>{
-        const loginName =document.querySelector("#loginName")
-    crud.postRequest("", {"studentName": loginName.value},(user) => {
-        signInUser = user;
-    })
-        
+    signUp.addEventListener('click', () => {
+        const loginName = document.querySelector("#loginName")
+        crud.postRequest("", {
+            "studentName": loginName.value
+        }, (user) => {
+            signInUser = user;
+        })
+
     })
 }
 
@@ -137,28 +142,29 @@ function newcard() {
     })
 }
 
-function my_Cards(){
+function my_Cards() {
     const card = document.querySelector(".nav_myCards");
-        card.addEventListener('click', () => {
-            const app = document.querySelector("#app");
-            crud.getRequest('http://localhost:8080/api/flashCards', Cards => {
-                console.log(Cards);
-                app.innerHTML = myCards(Cards);
-                bind_links();
-            })
+    card.addEventListener('click', () => {
+        const app = document.querySelector("#app");
+        crud.getRequest('http://localhost:8080/api/flashCards', Cards => {
+            console.log(Cards);
+            app.innerHTML = myCards(Cards);
+            bind_links();
         })
+    })
 }
-function bind_links(){
+
+function bind_links() {
     let links = document.querySelectorAll(".tag-list-title");
     links.forEach((link) => {
         link.addEventListener('click', (event) => {
-            if(event.target.classList.contains("tag-list-title")){
-               let id= event.target.parentElement.querySelector(".tag-list-id").value;
-               crud.getRequest('http://localhost:8080/api/flashCards/'+id, Card => {
-                console.log(Card);
-                app.innerHTML = flashCard(Card);
+            if (event.target.classList.contains("tag-list-title")) {
+                let id = event.target.parentElement.querySelector(".tag-list-id").value;
+                crud.getRequest('http://localhost:8080/api/flashCards/' + id, Card => {
+                    console.log(Card);
+                    app.innerHTML = flashCard(Card);
 
-            })
+                })
             }
         })
     })
@@ -188,7 +194,7 @@ function contact() {
 //     let slideList = document.getElementById("slideWrap");
 //     let count = 1;
 //     let items = slideList.querySelectorAll('li').length;
-    
+
 //     window.addEventListener('resize', function() {
 //         sliderWidth = slider.offsetWidth;
 //     })
@@ -198,13 +204,15 @@ function contact() {
 
 
 function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 9000); // Change image every 2 seconds
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+        myIndex = 1
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 9000); // Change image every 2 seconds
 }
