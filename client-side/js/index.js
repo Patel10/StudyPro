@@ -8,6 +8,7 @@ import signUp from './components/signUp';
 import contactUs from './components/contactUs';
 import crud from './crud/crud';
 import flashCard from './components/flashCard';
+import newCard from './components/newCard';
 
 
 buildPage();
@@ -21,6 +22,7 @@ function buildPage() {
     signup();
     about();
     contact();
+    newcard();
     landHome();
     FlashCard();
 
@@ -82,6 +84,14 @@ function signup() {
     signup.addEventListener('click', () => {
         const app = document.querySelector('#app');
         app.innerHTML = signUp();
+    })
+}
+
+function newcard() {
+    const signup = document.querySelector(".nav_newCard");
+    signup.addEventListener('click', () => {
+        const app = document.querySelector('#app');
+        app.innerHTML = newCard();
     })
 }
 function my_Cards(){

@@ -1,3 +1,6 @@
+/* header styling */
+
+
 body {
 
   font-family: "Lato", sans-serif;
@@ -17,7 +20,7 @@ body {
   line-height: 60px;
   padding-left: 20px;
   color: white;
-  margin-right: 250px;
+  margin-right: 75px;
 }
 
 h5 {
@@ -123,20 +126,18 @@ nav {
   transition: transform 0.5s ease-in-out;
 }
 
+
+/*  portfolio - about us styling */
 .portfolio-items-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   width: auto;
   margin: 50px 40px 40px;
 }
 
 .portfolio-item-wrapper {
   position: relative;
-
 }
-
-
 
 .portfolio-img-background {
   background-size: 50%;
@@ -146,8 +147,6 @@ nav {
   background-position: center center;
   background-repeat: no-repeat;
 }
-
-
 
 .img-text-wrapper {
   transition: 1s;
@@ -183,7 +182,6 @@ nav {
 }
 
 .img-text-wrapper:hover .subtitle {
-
   color: white;
   font-weight: 500;
   padding-left: 10px;
@@ -193,7 +191,6 @@ nav {
 
 .logo-wrapper img {
   width: 150%;
-
   padding-top: 50%;
 
 }
@@ -203,13 +200,6 @@ nav {
   grid-template-columns: 1fr 1fr;
 }
 
-.profile-image-wrapper img {
-  width: 100%;
-}
-
-.profile-content-wrapper {
-  padding: 30px;
-}
 
 
 /* ------------------------------------- */
