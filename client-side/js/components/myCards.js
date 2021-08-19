@@ -1,27 +1,34 @@
 export default function myCards(Cards) {
     return `
 
-    <ul class="tag_list">
+    <div class="tag_list">
     
     ${Cards.map((myCard) => {
         return `
-        <li class="tag-list-id">${myCard.id}</li>
-        <li class="tag-list-id">${myCard.title}</li>
-        <li class="tag-list-id">${myCard.description}</li>
-        <li class="tag-list-id">${myCard.studentName}</li>
+        <div>
+        <input type="hidden" class="tag-list-id" value="${myCard.id}"></input>
+        <p class="tag-list-title">${myCard.title}</p>
+        </div>
+       
+       
 
 
         
         
+<<<<<<< HEAD
         `;
     })}
+=======
+        `
+    }).join("")}
+>>>>>>> main
     
     
     
     
     
     
-    </ul>
+    </div>
 
     `
 }

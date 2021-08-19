@@ -94,6 +94,36 @@ function signup() {
         app.innerHTML = signUp();
     })
 }
+<<<<<<< HEAD
+=======
+function my_Cards(){
+    const card = document.querySelector(".nav_myCards");
+        card.addEventListener('click', () => {
+            const app = document.querySelector("#app");
+            crud.getRequest('http://localhost:8080/api/flashCards', Cards => {
+                console.log(Cards);
+                app.innerHTML = myCards(Cards);
+                bind_links();
+            })
+        })
+}
+function bind_links(){
+    let links = document.querySelectorAll(".tag-list-title");
+    links.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            if(event.target.classList.contains("tag-list-title")){
+               let id= event.target.parentElement.querySelector(".tag-list-id").value;
+               crud.getRequest('http://localhost:8080/api/flashCards/'+id, Card => {
+                console.log(Card);
+                app.innerHTML = flashCard(Card);
+
+            })
+            }
+        })
+    })
+}
+
+>>>>>>> main
 
 function about() {
     const about_us = document.querySelector(".nav_about");
@@ -107,6 +137,13 @@ function contact() {
     const contact_us = document.querySelector(".nav_contact");
     contact_us.addEventListener("click", () => {
         const app = document.querySelector("#app");
+<<<<<<< HEAD
         app.innerHTML = ContactUs();
+=======
+        crud.getRequest(`http://localhost:8080/api/flashCards/4`, currentCard => {
+            console.log(currentCard);
+            app.innerHTML = flashCard(currentCard)
+        })
+>>>>>>> main
     })
 }

@@ -7,30 +7,65 @@ import phonepng from "../../images/phone.jpg";
 export default function contactUs() {
     return `
     <div class="top">
+<<<<<<< HEAD
     <div class="top1">
         <p>Contact Us</p>
         <div class="home">
            
+=======
+    <div class="content">
+            <h2 class="contactUs">Contact Us </h2>
+            <p> If you have any questions or queries don't hesitate to call us and we will happy to help. Feel free to contact us by email, phone or connect with us on social media.
+            Also, you can find our product at Barnes and Noble in your area. </p>
+>>>>>>> main
         </div>
-    </div>
 </div>
 
 <div class="head">
     <div class="box">
-        <img src="${bookstack}" alt="contactdesign" style="width:100%">
+
+    
+    <div class="logo1">
+    <a href="https://goo.gl/maps/TJSgjuizcgGXRgbv9">
+        <img src="${address}" alt="addresslogo" class="logo"> Barnes & Noble</a>
+</div>
+<div class="logo2">
+    <a href="mailto:someone@yoursite.com">
+        <img src="${emailpng}" alt="emaillogo" class="logo">contactus@studypro.com</a>
+</div>
+<div class="logo3">
+    <a href="tel:1110001010">
+        <img src="${phonepng}" alt="phonelogo" class="logo"> 614-000-1010</a>
+</div>
+<div class="logo4">
+    <a href="https://www.facebook.com/">
+        <img src="${facebook}" alt="facebooklogo" class="logo">find us on facebook</a>
+
+
+</div>
     </div>
     <div class="box">
 
+<<<<<<< HEAD
         <div class="box1">
             <div class="logo1">
 
                 <a href="https://goo.gl/maps/TJSgjuizcgGXRgbv9">
                     <img src="${address}" alt="addresslogo" class="logo"> Barnes & Noble</a>
+=======
+              <div class="contactForm">
+        <form> 
+            <h2>Send Message </h2>
+            <div class="inputBox">
+                <input type="text" name=" " required="required">
+                <span> Full Name </span>
+>>>>>>> main
             </div>
-            <div class="logo2">
-                <a href="mailto:someone@yoursite.com">
-                    <img src="${emailpng}" alt="emaillogo" class="logo">contactus@studypro.com</a>
+            <div class="inputBox">
+                <input type="text" name=" " required="required">
+                <span> Email </span>
             </div>
+<<<<<<< HEAD
             <div class="logo3">
                 <a href="tel:1110001010">
                     <img src="${address}" alt="phonelogo" class="logo"> 614-000-1010</a>
@@ -41,8 +76,18 @@ export default function contactUs() {
                     <img src="${facebook}" alt="facebooklogo" class="logo">find us on facebook</a>
 
 
+=======
+            <div class="inputBox">
+                <textarea required="required"></textarea>
+                <span> Type your message... </span>
             </div>
-        </div>
+            <div class="inputBox">
+                <input type="submit" name="" value="Send">
+>>>>>>> main
+            </div>
+            
+        </form>
+    </div>
     </div>
 </div>
 
