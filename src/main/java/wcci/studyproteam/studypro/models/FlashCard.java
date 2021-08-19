@@ -71,6 +71,7 @@ public class FlashCard {
         this.description = description;
         this.image = image;
         this.student = student;
+        this.hashTags = new HashSet<HashTag>();
     }
 
     @Override

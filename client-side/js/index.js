@@ -1,29 +1,28 @@
 import aboutUs from './components/aboutUs';
-import Home from './components/Home';
+import home from './components/home';
 import Header from './components/Header';
 import HashTags from './components/hashTags';
 import searchBy from './components/searchBy';
 import signUp from './components/signUp';
-// import ContactUs from './components/ContactUs';
+import contactUs from './components/contactUs';
 import crud from './crud/crud';
+import myCards from './components/myCards';
+import flashCard from './components/flashCard';
 
 var myIndex = 0;
 buildPage();
 
 
 function buildPage() {
-    landHome();
+    
     header();
     searchByBtn();
     signup();
     about();
     contact();
-<<<<<<< HEAD
     landHome();
-    FlashCard();
     makeHome();
-=======
->>>>>>> main
+    my_Cards();
 
 }
 
@@ -143,7 +142,7 @@ function about() {
     const about_us = document.querySelector(".nav_about");
     about_us.addEventListener("click", () => {
         const app = document.querySelector("#app");
-        app.innerHTML = AboutUs();
+        app.innerHTML = aboutUs();
     })
 }
 
@@ -151,7 +150,7 @@ function contact() {
     const contact_us = document.querySelector(".nav_contact");
     contact_us.addEventListener("click", () => {
         const app = document.querySelector("#app");
-        app.innerHTML = ContactUs();
+        app.innerHTML = contactUs();
     })
 
 }
