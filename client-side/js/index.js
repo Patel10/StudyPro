@@ -11,6 +11,7 @@ import HashTagForm from './components/hashTagForm';
 import StudentNameForm from './components/studentNameForm';
 import newCard from './components/newCard';
 import myCards from './components/myCards';
+import FlashCardTitleForm from './components/flashCardTitleForm';
 
 let signInUser;
 
@@ -73,14 +74,14 @@ function searchByBtn() {
     });
 }
 
-function wireUpHashtagSearch() {
-    const nav_hash = document.querySelector(".searchByHashtag");
-    nav_hash.addEventListener('click', () => {
-       // const app = document.querySelector("#app");
-       // crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
-          //  console.log(hashtags);
-           // app.innerHTML = HashTags(hashtags)
-      //  });
+function wireUpHashTagSearch() {
+    const nav_hashTag = document.querySelector(".searchByHashTag");
+    nav_hashTag.addEventListener('click', () => {
+        const app = document.querySelector("#app");
+        crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
+            console.log(hashtags);
+            app.innerHTML = HashTags(hashtags)
+        });
       const form = document.querySelector('.form');
       form.innerHTML =  HashTagForm();
      
@@ -98,32 +99,23 @@ function wireUpStudentNameSearch() {
      form.innerHTML = StudentNameForm();
     });
 }
+function wireUpFlashCardTitleSearch() {
+    const nav_flashCard = document.querySelector(".searchByFlashCardTitle");
+    nav_flashCard.addEventListener('click', () => {
+        const form = document.querySelector('.form');
+        form.innerHTML = FlashCardTitleForm();
+       });
+   }
 
-
-
-function wireUpStudentNameSearch() {
-    const studentNameElem = document.querySelector("#searchByStudentName");
-    studentNameElem.addEventListener('click', () => {
-        const app = document.querySelector("#app");
-        app.innerHTML = studentName(studentName)
-    });
-}
 
 function wireUpGradeSearch() {
-    const gradeElem = document.querySelector("#searchByGrade");
+    const gradeElem = document.querySelector(".searchByGrade");
     gradeElem.addEventListener('click', () => {
         const app = document.querySelector("#app");
         app.innerHTML = grade(grade)
     });
 }
 
-function wireUpFlashCardTitleSearch() {
-    const flashCardElem = document.querySelector("#searchByFlashCardTitle");
-    flashCardElem.addEventListener('click', () => {
-        const app = document.querySelector("#app");
-        app.innerHTML = flashCardTitle(flashCardTitle)
-    });
-}
 
 function signup() {
     const signup = document.querySelector(".nav_sign");
