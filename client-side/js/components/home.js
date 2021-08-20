@@ -1,4 +1,4 @@
-import address from "../../images/address.png";
+import puzzle2 from "../../images/puzzle.png";
 import puzzle from "../../images/contribution.png";
 export default function home()
 {
@@ -19,11 +19,8 @@ export default function home()
 
 
 <div id="slideshow">
- <img class="mySlides" src="${address}" style="width:50%">
+ <img class="mySlides" src="${puzzle2}" style="width:50%">
  <img class="mySlides" src="${puzzle}" style="width:50%">
-</div>
-
-</div>
 </div>
 
 
