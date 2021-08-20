@@ -255,7 +255,7 @@ nav {
 .contain-wrapper{
   border-radius: 10px;
   border-width: 2px;
-  border-style: solid;
+  margin-top: 30px;
   overflow: auto;
   display: flex;
   flex-direction: column;
