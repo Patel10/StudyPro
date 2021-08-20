@@ -66,10 +66,10 @@ font-feature-settings: "kern", "liga", "clig", "calt";
 font-kerning: normal;
 font-size: 16px;
 font-variant-ligatures: common-ligatures contextual;
-height: 352px;
+height: 452px;
 line-height: 26px;
 margin-bottom: 32px;
-margin-left: 10px;
+margin-left: 26px;
 margin-right: 0px;
 margin-top: 32px;
 padding-left: 36.9px;
@@ -102,6 +102,7 @@ background-color: rgb(91, 113, 209);
 .mySlides{
     width: 300px;
     height: 300px;
+    border-radius: 15px;
 }
 /* #slider{
     position: relative;
@@ -133,7 +134,7 @@ background-color: rgb(91, 113, 209);
     width: 700px;
     height: 700px;
     padding: 10px;
-    margin-left: 35%;
+    margin-left: 33%;
    
     
 }
@@ -143,4 +144,9 @@ background-color: rgb(91, 113, 209);
     left: 10px;
     right: 10px;
     bottom: 10px;
+    align-items: center;
 } 
+html,h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 100;
+}
