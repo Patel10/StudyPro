@@ -12,6 +12,7 @@ import StudentNameForm from './components/studentNameForm';
 import newCard from './components/newCard';
 import myCards from './components/myCards';
 import FlashCardTitleForm from './components/flashCardTitleForm';
+import gradeform from './components/gradeform';
 
 let signInUser;
 
@@ -112,12 +113,13 @@ function wireUpFlashCardTitleSearch() {
 
 
 function wireUpGradeSearch() {
-    const gradeElem = document.querySelector(".searchByGrade");
-    gradeElem.addEventListener('click', () => {
-        const app = document.querySelector("#app");
-        app.innerHTML = grade(grade)
-    });
-}
+    const nav_grade= document.querySelector(".searchByGrade");
+    nav_grade.addEventListener('click', () => {
+        const form = document.querySelector('.form');
+        form.innerHTML = gradeform();
+       });
+   }
+  
 
 
 function signup() {
