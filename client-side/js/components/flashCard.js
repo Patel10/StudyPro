@@ -10,7 +10,7 @@ export default function flashCard(card) {
                     <img src="${card.image}">
                 </div>
                 <div class="subtitle">
-                Flash cards are an easy and interesting way for your childen recognize the world around them. Approved worldwide by child psychologists teachers and parents themselves flashcards are ideal for very young children and those up to 7 years of age.
+                Flash cards are an easy and interesting way for your children recognize the world around them. Approved worldwide by child psychologists teachers and parents themselves flashcards are ideal for very young children and those up to 7 years of age.
                 </div>       
     
         </div>
