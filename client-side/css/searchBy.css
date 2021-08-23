@@ -1,0 +1,56 @@
+.searchHash {
+    background-color: chocolate;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 6px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    position: relative;
+    color: white;
+
+}
+
+.searchHash:hover:after {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+
+.searchStudent {
+    background-color: chocolate;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 6px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    position: relative;
+    color: white;
+
+
+}
+
+.searchCard {
+    background-color: chocolate;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 6px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    position: relative;
+    color: white;
+
+}
+
+.searchGrade {
+    background-color: chocolate;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 6px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    position: relative;
+    color: white;
+
+}

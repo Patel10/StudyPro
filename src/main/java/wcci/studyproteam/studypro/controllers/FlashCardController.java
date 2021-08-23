@@ -3,6 +3,8 @@ package wcci.studyproteam.studypro.controllers;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.web.bind.annotation.*;
+import wcci.studyproteam.studypro.models.CardContent;
+import wcci.studyproteam.studypro.repositories.CardContentRepository;
 import wcci.studyproteam.studypro.repositories.HashTagRepository;
 import wcci.studyproteam.studypro.models.FlashCard;
 import wcci.studyproteam.studypro.models.HashTag;
@@ -27,6 +29,9 @@ public class FlashCardController {
     @Resource
     private StudentRepository studentRepo;
 
+    @Resource
+    private CardContentRepository cardContentRepo;
+
     @GetMapping("/api/flashCards")
     public Collection<FlashCard> getFlashCards() {
         return (Collection<FlashCard>) flashCardRepo.findAll();
@@ -41,61 +46,21 @@ public class FlashCardController {
     public FlashCard addFlashTitleToFlashCard(@RequestBody String body) throws JSONException {
         JSONObject newFlashCard = new JSONObject(body);
         String flashCardTitle = newFlashCard.getString("FlashCardTitle");
-        FlashCard tempFlashCard = new FlashCard();
-        flashCardRepo.save(tempFlashCard);
-
-        return tempFlashCard;
-    }
-
-    @PostMapping("/api/flashCards/add-flashCard")
-    public FlashCard addFlashInfoToFlashCard(@RequestBody String body) throws JSONException {
-        JSONObject newFlashCard = new JSONObject(body);
+//        use flashcard info & flashcardname to card content/
         String flashCardInfo = newFlashCard.getString("FlashCardInfo");
-        FlashCard tempFlashCard = new FlashCard();
-        flashCardRepo.save(tempFlashCard);
-
-        return tempFlashCard;
-    }
-
-    @PostMapping("/api/flashCards/add-flashCard")
-    public FlashCard addFlashCardNameToFlashCard(@RequestBody String body) throws JSONException {
-        JSONObject newFlashCard = new JSONObject(body);
-        String flashCardName = newFlashCard.getString("FlashCardName");
-        FlashCard tempFlashCard = new FlashCard();
-        flashCardRepo.save(tempFlashCard);
-
-        return tempFlashCard;
-    }
-
-    @PostMapping("/api/flashCards/add-flashCard")
-    public FlashCard addFlashCardToFlashImg(@RequestBody String body) throws JSONException {
-        JSONObject newFlashCard = new JSONObject(body);
         String flashCardImg = newFlashCard.getString("FlashCardImg");
-        FlashCard tempFlashCard = new FlashCard();
-        flashCardRepo.save(tempFlashCard);
-        return tempFlashCard;
-    }
-
-    @PostMapping("/api/flashCards/add-flashCard")
-    public FlashCard addFlashCardDescriptionToFlashCard(@RequestBody String body) throws JSONException {
-        JSONObject newFlashCard = new JSONObject(body);
         String flashCardDescription = newFlashCard.getString("FlashCardDescription");
-        FlashCard tempFlashCard = new FlashCard();
+        Long flashCardStudentId = newFlashCard.getLong("FlashCardStudentId");
+        Student TempStudent = studentRepo.findById(flashCardStudentId).get();
+        FlashCard tempFlashCard = new FlashCard(flashCardTitle, TempStudent.getStudentName(), flashCardDescription, flashCardImg, TempStudent);
         flashCardRepo.save(tempFlashCard);
+        CardContent cardContent = new CardContent(TempStudent.getStudentName(), flashCardTitle, flashCardInfo, "", tempFlashCard);
+        cardContentRepo.save(cardContent);
+
         return tempFlashCard;
     }
 
-    @PostMapping("/api/flashCards/add-flashCard")
-    public FlashCard addFlashCardStudentNameToFlashCard(@RequestBody String body) throws JSONException {
-        JSONObject newFlashCard = new JSONObject(body);
-        String flashCardStudentName = newFlashCard.getString("FlashCardStudentName");
-        FlashCard tempFlashCard = new FlashCard();
-        flashCardRepo.save(tempFlashCard);
-        return tempFlashCard;
-    }
-
-
-    @PostMapping("/api/flashCards/{id}/add-hashtag")
+        @PostMapping("/api/flashCards/{id}/add-hashtag")
     public Optional<FlashCard> addHashTagToFlashCard(@RequestBody String body, @PathVariable Long id) throws JSONException {
         JSONObject newHashTag = new JSONObject(body);
         String hashTagTitle = newHashTag.getString("hashTagTitle");
