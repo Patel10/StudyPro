@@ -5,13 +5,8 @@ export default function newCard() {
 
     <div class="newCardBox">
         <div class="newCardForm">
-            <form> 
+            <div> 
             <h2>Make a new card </h2>
-
-                <div class="inputBox">
-                <input type="text" id="newName" name=" " required="required">
-                <span> Student Name:     </span>
-                </div>
 
                 <div class="inputBox">
                 <input type="text" id="newTitle"name=" " required="required">
@@ -34,10 +29,10 @@ export default function newCard() {
                 </div>
             
             <div class="inputBox">
-                <input type="submit" id="newSubmit" name="" value="Submit">
+                <button id="newSubmit" name="" >Submit</button>
             </div>
             
-        </form>
+        </div>
     </div>
     </div>
 
