@@ -28,7 +28,6 @@ function buildPage() {
     about();
     contact();
     newcard();
-
     landHome();
     makeHome();
     my_Cards();
@@ -86,40 +85,42 @@ function wireUpHashTagSearch() {
             console.log(hashtags);
             app.innerHTML = HashTags(hashtags)
         });
-      const form = document.querySelector('.form');
-      form.innerHTML =  HashTagForm();
-     
+        const form = document.querySelector('.form');
+        form.innerHTML = HashTagForm();
+
     });
 }
+
 function wireUpStudentNameSearch() {
     const nav_student = document.querySelector(".searchByStudentName");
     nav_student.addEventListener('click', () => {
-       // const app = document.querySelector("#app");
-       // crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
-          //  console.log(hashtags);
-           // app.innerHTML = HashTags(hashtags)
-      //  });
-     const form = document.querySelector('.form');
-     form.innerHTML = StudentNameForm();
+        // const app = document.querySelector("#app");
+        // crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
+        //  console.log(hashtags);
+        // app.innerHTML = HashTags(hashtags)
+        //  });
+        const form = document.querySelector('.form');
+        form.innerHTML = StudentNameForm();
     });
 }
+
 function wireUpFlashCardTitleSearch() {
     const nav_flashCard = document.querySelector(".searchByFlashCardTitle");
     nav_flashCard.addEventListener('click', () => {
         const form = document.querySelector('.form');
         form.innerHTML = FlashCardTitleForm();
-       });
-   }
+    });
+}
 
 
 function wireUpGradeSearch() {
-    const nav_grade= document.querySelector(".searchByGrade");
+    const nav_grade = document.querySelector(".searchByGrade");
     nav_grade.addEventListener('click', () => {
         const form = document.querySelector('.form');
         form.innerHTML = gradeform();
-       });
-   }
-  
+    });
+}
+
 
 
 function signup() {
@@ -150,6 +151,32 @@ function newcard() {
     signup.addEventListener('click', () => {
         const app = document.querySelector('#app');
         app.innerHTML = newCard();
+        wireUpNewFlashCard();
+    })
+}
+
+function wireUpNewFlashCard() {
+    const submitBtn = document.querySelector("#newSubmit");
+    submitBtn.addEventListener('click', () => {
+        const title = document.querySelector("#newTitle")
+        const description = document.querySelector("#newDescription")
+        const info = document.querySelector("#newCardInfo")
+        const image = document.querySelector("#newLink")
+        crud.postRequest("http://localhost:8080/api/flashCards/add-flashCard", {
+            "Title": title.value,
+            "CardInfo": info.value,
+            "CardDescription": description.value,
+            "CardImg": image.value,
+            "StudentId": 8 //signInUser.id
+        }, (FirstCard) => {
+            console.log(FirstCard);
+            crud.getRequest('http://localhost:8080/api/flashCards/' + FirstCard.id, Card => {
+                console.log(Card);
+                app.innerHTML = flashCard(Card);
+
+            })
+        })
+
     })
 }
 
@@ -216,14 +243,15 @@ function contact() {
 
 function carousel() {
 
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 9000); // Change image every 2 seconds
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+        myIndex = 1
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 9000); // Change image every 2 seconds
 }
-

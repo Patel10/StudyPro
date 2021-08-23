@@ -7,18 +7,18 @@ body {
   margin: 0px;
 }
 
-
-.content h2{
+.content h2 {
   font-family: 'Dancing Script', cursive;
   color: grey;
   font-size: 40px;
   padding: 10px;
 }
-.content p{
+
+.content p {
   padding: 15px;
 }
 
-.study_pro{
+.study_pro {
   margin: 0;
   font-family: 'Dancing Script', cursive;
   font-size: 40px;
@@ -30,7 +30,7 @@ body {
 
 h5 {
   font-family: "Style Script", cursive;
-   font-weight: 700;
+  font-weight: 700;
   margin-right: 250px;
 }
 
@@ -46,6 +46,7 @@ h5 {
   height: 30%;
 
 }
+
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -75,74 +76,76 @@ h5 {
 .active-nav-link a {
   color: black;
 }
-h2{
+
+h2 {
   justify-content: space-between;
   padding-bottom: 5px;
-  
+
 
 }
 
 .nav-link-wrapper a {
   color: #8a8a8a;
   text-decoration: none;
-    
-}
-.nav-link-wrapper1  {
- height: 20px;
-text-decoration: none;
-color:transparent;
-margin-bottom: 40px;
 
 }
 
-.nav-link-wrapper1:hover  {
+.nav-link-wrapper1 {
+  height: 20px;
+  text-decoration: none;
+  color: transparent;
+  margin-bottom: 40px;
+
+}
+
+.nav-link-wrapper1:hover {
   transition: 1s;
   margin-bottom: 40px;
   height: 70px;
-  color:black;
- border-style: solid grey
- }
+  color: black;
+  border-style: solid grey
+}
 
 .nav-link-wrapper2 {
   height: 20px;
   text-decoration: none;
-  color:transparent;
+  color: transparent;
   margin-bottom: 40px;
- }
+}
 
 nav {
   text-decoration: none;
-  transition-duration: 5s; 
+  transition-duration: 5s;
 }
 
- .nav-link-wrapper2:hover  {
+.nav-link-wrapper2:hover {
   transition: 1s;
   margin-bottom: 40px;
   height: 60px;
- text-decoration: none;
- color:black;
+  text-decoration: none;
+  color: black;
 
- }
- 
- .nav-link-wrapper3  {
+}
+
+.nav-link-wrapper3 {
   text-decoration: none;
   height: 20px;
- }
+}
 
- .nav-link-wrapper3:hover  {
+.nav-link-wrapper3:hover {
   transition: 1s;
   margin-bottom: 40px;
-  height:40px;
- text-decoration: none;
- 
- }
- 
+  height: 40px;
+  text-decoration: none;
+
+}
+
 
 .nav-link-wrapper a:hover {
   color: black;
   font-size: larger;
   font-weight: 600;
-  transition-duration: 5s; 
+  transition-duration: 5s;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -154,13 +157,14 @@ nav {
   width: auto;
   margin: 50px 40px 40px;
 }
-.logo-wrapper{
+
+.logo-wrapper {
   padding-top: 2px;
   padding-left: 20px;
   width: 50%;
   height: auto;
-  
-  
+
+
 }
 
 .portfolio-item-wrapper {
@@ -176,13 +180,14 @@ nav {
   background-repeat: no-repeat;
 }
 
+
 .img-text-wrapper {
   transition: 1s;
   position: absolute;
   top: 200px;
   display: flex;
   flex-direction: column;
-  
+
   align-items: center;
   height: 30%;
   text-align: center;
@@ -216,10 +221,11 @@ nav {
   padding-right: 10px;
 
 }
-.subtitle{
+
+.subtitle {
   text-align: center;
   padding-bottom: 10px;
-  
+
 }
 
 .logo-wrapper img {
@@ -229,7 +235,7 @@ nav {
   padding-top: 10%;
   padding-left: 8.5em;
 
-  
+
 
 }
 
@@ -251,15 +257,8 @@ nav {
   list-style-type: none;
 }
 
-#searchByHashtag {
-  background-color: rgb(207, 194, 194);
-  padding: 10px;
-  margin: 8px;
-  border-radius: 6px;
-  font-weight: bolder;
 
-}
-.contain-wrapper{
+.contain-wrapper {
   border-radius: 10px;
   border-width: 2px;
   margin-top: 30px;
@@ -268,5 +267,62 @@ nav {
   flex-direction: column;
   text-align: center;
   align-content: flex-start;
+
+}
+
+.searchHash {
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+
+}
+
+.searchHash:hover:after {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+
+.searchStudent {
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+
+
+}
+
+.searchCard {
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+
+}
+
+.searchGrade {
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
 
 }
