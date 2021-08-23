@@ -45,19 +45,20 @@ public class FlashCardController {
     @PostMapping("/api/flashCards/add-flashCard")
     public FlashCard addFlashTitleToFlashCard(@RequestBody String body) throws JSONException {
         JSONObject newFlashCard = new JSONObject(body);
-        String flashCardTitle = newFlashCard.getString("FlashCardTitle");
-//        use flashcard info & flashcardname to card content/
-        String flashCardInfo = newFlashCard.getString("FlashCardInfo");
-        String flashCardImg = newFlashCard.getString("FlashCardImg");
-        String flashCardDescription = newFlashCard.getString("FlashCardDescription");
-        Long flashCardStudentId = newFlashCard.getLong("FlashCardStudentId");
+        String flashCardTitle = newFlashCard.getString("Title");
+        String flashCardInfo = newFlashCard.getString("CardInfo");
+        String flashCardImg = newFlashCard.getString("CardImg");
+        String flashCardDescription = newFlashCard.getString("CardDescription");
+        Long flashCardStudentId = newFlashCard.getLong("StudentId");
         Student TempStudent = studentRepo.findById(flashCardStudentId).get();
         FlashCard tempFlashCard = new FlashCard(flashCardTitle, TempStudent.getStudentName(), flashCardDescription, flashCardImg, TempStudent);
         flashCardRepo.save(tempFlashCard);
-        CardContent cardContent = new CardContent(TempStudent.getStudentName(), flashCardTitle, flashCardInfo, "", tempFlashCard);
-        cardContentRepo.save(cardContent);
+       CardContent cardContent = new CardContent(TempStudent.getStudentName(), flashCardTitle, flashCardInfo, "", tempFlashCard);
 
-        return tempFlashCard;
+       cardContentRepo.save(cardContent);
+
+
+        return flashCardRepo.findById(tempFlashCard.getId()).get();
     }
 
         @PostMapping("/api/flashCards/{id}/add-hashtag")

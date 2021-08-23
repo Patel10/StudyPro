@@ -43,6 +43,10 @@ public class CardContent {
         return studentName;
     }
 
+    public FlashCard getFlashCard() {
+        return flashCard;
+    }
+
     public CardContent() {
 
     }
