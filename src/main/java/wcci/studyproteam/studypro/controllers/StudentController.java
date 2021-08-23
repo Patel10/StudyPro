@@ -31,6 +31,11 @@ public class StudentController {
 
         return studentRepo.findById(studentId).get();
     }
+    @GetMapping("/api/students/name/{name}")
+    public Student getStudent(@PathVariable String name) {
+
+        return studentRepo.findByStudentName(name).get();
+    }
     @PostMapping("/api/students/add-studentName")
     public Student addStudentNameToStudent(@RequestBody String body) throws JSONException {
         JSONObject newStudentName = new JSONObject(body);
