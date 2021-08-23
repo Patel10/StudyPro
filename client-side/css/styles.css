@@ -79,6 +79,7 @@ h5 {
 
 h2 {
   justify-content: space-between;
+  padding-bottom: 5px;
 
 
 }
@@ -223,14 +224,19 @@ nav {
 
 .subtitle {
   text-align: center;
-  padding-bottom: 300px;
+  padding-bottom: 10px;
 
 }
 
 .logo-wrapper img {
   align-items: center;
   width: 150%;
-  padding-top: 50%;
+  padding-bottom: 10px;
+  padding-top: 10%;
+  padding-left: 8.5em;
+
+
+
 }
 
 .two-column-wrapper {
@@ -255,11 +261,12 @@ nav {
 .contain-wrapper {
   border-radius: 10px;
   border-width: 2px;
-  border-style: solid;
+  margin-top: 30px;
   overflow: auto;
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-content: flex-start;
 
 }
 

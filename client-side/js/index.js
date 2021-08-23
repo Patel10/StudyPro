@@ -7,8 +7,12 @@ import signUp from './components/signUp';
 import contactUs from './components/contactUs';
 import crud from './crud/crud';
 import flashCard from './components/flashCard';
+import HashTagForm from './components/hashTagForm';
+import StudentNameForm from './components/studentNameForm';
 import newCard from './components/newCard';
 import myCards from './components/myCards';
+import FlashCardTitleForm from './components/flashCardTitleForm';
+import gradeform from './components/gradeform';
 
 let signInUser;
 
@@ -75,41 +79,48 @@ function searchByBtn() {
 }
 
 function wireUpHashTagSearch() {
-    const nav_hash = document.querySelector("#searchByHashTags");
-    nav_hash.addEventListener('click', () => {
+    const nav_hashTag = document.querySelector(".searchByHashTag");
+    nav_hashTag.addEventListener('click', () => {
         const app = document.querySelector("#app");
         crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
             console.log(hashtags);
             app.innerHTML = HashTags(hashtags)
         });
+      const form = document.querySelector('.form');
+      form.innerHTML =  HashTagForm();
+     
     });
 }
-
-
-
 function wireUpStudentNameSearch() {
-    const studentNameElem = document.querySelector("#searchByStudentName");
-    studentNameElem.addEventListener('click', () => {
-        const app = document.querySelector("#app");
-        app.innerHTML = studentName(studentName)
+    const nav_student = document.querySelector(".searchByStudentName");
+    nav_student.addEventListener('click', () => {
+       // const app = document.querySelector("#app");
+       // crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
+          //  console.log(hashtags);
+           // app.innerHTML = HashTags(hashtags)
+      //  });
+     const form = document.querySelector('.form');
+     form.innerHTML = StudentNameForm();
     });
 }
+function wireUpFlashCardTitleSearch() {
+    const nav_flashCard = document.querySelector(".searchByFlashCardTitle");
+    nav_flashCard.addEventListener('click', () => {
+        const form = document.querySelector('.form');
+        form.innerHTML = FlashCardTitleForm();
+       });
+   }
+
 
 function wireUpGradeSearch() {
-    const gradeElem = document.querySelector("#searchByGrade");
-    gradeElem.addEventListener('click', () => {
-        const app = document.querySelector("#app");
-        app.innerHTML = grade(grade)
-    });
-}
+    const nav_grade= document.querySelector(".searchByGrade");
+    nav_grade.addEventListener('click', () => {
+        const form = document.querySelector('.form');
+        form.innerHTML = gradeform();
+       });
+   }
+  
 
-function wireUpFlashCardTitleSearch() {
-    const flashCardElem = document.querySelector("#searchByFlashCardTitle");
-    flashCardElem.addEventListener('click', () => {
-        const app = document.querySelector("#app");
-        app.innerHTML = flashCardTitle(flashCardTitle)
-    });
-}
 
 function signup() {
     const signup = document.querySelector(".nav_sign");
@@ -204,15 +215,15 @@ function contact() {
 
 
 function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    myIndex++;
-    if (myIndex > x.length) {
-        myIndex = 1
-    }
-    x[myIndex - 1].style.display = "block";
-    setTimeout(carousel, 9000); // Change image every 2 seconds
+
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 9000); // Change image every 2 seconds
 }
+
