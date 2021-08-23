@@ -10,10 +10,10 @@ export default function signUp() {
              </div>
     </div>
     <div class="forms">
-        <div class="form-content">
+        < class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-          <form action="#">
+          <div>
             <div class="input-boxes">
 
               <div class="input-box">
@@ -22,43 +22,17 @@ export default function signUp() {
               </div>
                             
               <div class="button input-box">
-                <input type="submit" id="loginSubmit" value="Submit">
+                <button  id="loginSubmit" >Submit </button>
               </div>
 
               <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
             </div>
 
-        </form>
+        </div>
       </div>
 
-        <div class="signup-form">
-          <div class="title">Signup</div>
-        <form action="#">
-            <div class="input-boxes">
-
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" id="userName" placeholder="Enter new username" required>
-              </div>
-
-              <div class="input-box">
-                <i class="fas fa-user"></i>
-                <input type="text" id="yourName" placeholder="Enter your name" required>
-              </div>
-
-              <div class="input-box">
-               <i class="fas fa-book"></i>
-               <input type="text" id="yourGrade" placeholder="Enter your grade" required>
-                </div>
-              
-              <div class="button input-box">
-                <input type="submit" id="signUpSubmit" value="Submit">
-              </div>
-              
-              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
-            </div>
-      </form>
-    </div>
+        
+    
     </div>
     </div>
   </div>

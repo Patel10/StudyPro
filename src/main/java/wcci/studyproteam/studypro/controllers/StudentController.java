@@ -1,15 +1,17 @@
 package wcci.studyproteam.studypro.controllers;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.springframework.web.bind.annotation.*;
+import wcci.studyproteam.studypro.models.FlashCard;
 import wcci.studyproteam.studypro.models.Student;
 import wcci.studyproteam.studypro.repositories.StudentRepository;
 import wcci.studyproteam.studypro.repositories.FlashCardRepository;
 
 import javax.annotation.Resource;
 import java.util.Collection;
+import java.util.Optional;
 
 @RestController
 public class StudentController {
@@ -28,5 +30,28 @@ public class StudentController {
     public Student getStudent(@PathVariable Long studentId) {
 
         return studentRepo.findById(studentId).get();
+    }
+    @GetMapping("/api/students/name/{name}")
+    public Student getStudent(@PathVariable String name) {
+
+        return studentRepo.findByStudentName(name).get();
+    }
+    @PostMapping("/api/students/add-studentName")
+    public Student addStudentNameToStudent(@RequestBody String body) throws JSONException {
+        JSONObject newStudentName = new JSONObject(body);
+        String StudentName = newStudentName.getString("StudentName");
+        Optional<Student> tempStudent = studentRepo.findByStudentName(StudentName);
+        Student tempStudentName ;
+        if (tempStudent.isEmpty()){
+            tempStudentName = new Student(StudentName,"6");
+
+        }
+        else {
+            tempStudentName = tempStudent.get();
+        }
+
+        studentRepo.save(tempStudentName);
+
+        return tempStudentName;
     }
 }

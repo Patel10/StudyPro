@@ -1,8 +1,8 @@
 export default function StudentNameForm(){
     return `
     <div>
-    <input type="text" placeholder="Enter studentName"/>
-    <button>submit</button>
+    <input class="studentNameInput" type="text" placeholder="Enter studentName"/>
+    <button class="studentNameSearch">submit</button>
 </div>
 
     `
