@@ -12,6 +12,7 @@ import StudentNameForm from './components/studentNameForm';
 import newCard from './components/newCard';
 import myCards from './components/myCards';
 import FlashCardTitleForm from './components/flashCardTitleForm';
+import gradeform from './components/gradeform';
 
 let signInUser;
 
@@ -29,10 +30,9 @@ function buildPage() {
     about();
     contact();
     newcard();
-
     landHome();
-    makeHome();
     my_Cards();
+    makeSignIn();
 
 }
 
@@ -44,6 +44,11 @@ function landHome() {
         makeHome();
     })
 
+}
+function makeSignIn() {
+ const app = document.querySelector('#app');
+        app.innerHTML = signUp();
+        wireUpSignIn();
 }
 
 function makeHome() {
@@ -68,7 +73,7 @@ function searchByBtn() {
     search_by.addEventListener('click', () => {
         const app = document.querySelector("#app");
         app.innerHTML = searchBy(searchBy)
-        wireUpHashTagSearch();
+       // wireUpHashTagSearch();
         wireUpStudentNameSearch();
         wireUpGradeSearch();
         wireUpFlashCardTitleSearch();
@@ -87,58 +92,77 @@ function wireUpHashTagSearch() {
             console.log(hashtags);
             app.innerHTML = HashTags(hashtags)
         });
-      const form = document.querySelector('.form');
-      form.innerHTML =  HashTagForm();
-     
+        const form = document.querySelector('.form');
+        form.innerHTML = HashTagForm();
+
     });
 }
+
 function wireUpStudentNameSearch() {
     const nav_student = document.querySelector(".searchByStudentName");
     nav_student.addEventListener('click', () => {
-       // const app = document.querySelector("#app");
-       // crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
-          //  console.log(hashtags);
-           // app.innerHTML = HashTags(hashtags)
-      //  });
-     const form = document.querySelector('.form');
-     form.innerHTML = StudentNameForm();
+        // const app = document.querySelector("#app");
+        // crud.getRequest('http://localhost:8080/api/hashtags', hashtags => {
+        //  console.log(hashtags);
+        // app.innerHTML = HashTags(hashtags)
+        //  });
+        const form = document.querySelector('.form');
+        form.innerHTML = StudentNameForm();
+        doStudentNameSearch();
     });
 }
+function doStudentNameSearch() {
+    const nameSearch = document.querySelector(".studentNameSearch");
+   nameSearch.addEventListener('click', () => {
+        const app = document.querySelector("#app");
+        const studentName = document.querySelector('.studentNameInput')
+        crud.getRequest('http://localhost:8080/api/students/name/'+studentName.value, Student => {
+            console.log(Student);
+            app.innerHTML = myCards(Student.flashCards);
+            bind_links();
+        });
+       
+
+    });
+
+}
+
 function wireUpFlashCardTitleSearch() {
     const nav_flashCard = document.querySelector(".searchByFlashCardTitle");
     nav_flashCard.addEventListener('click', () => {
         const form = document.querySelector('.form');
         form.innerHTML = FlashCardTitleForm();
-       });
-   }
+    });
+}
 
 
 function wireUpGradeSearch() {
-    const gradeElem = document.querySelector(".searchByGrade");
-    gradeElem.addEventListener('click', () => {
-        const app = document.querySelector("#app");
-        app.innerHTML = grade(grade)
+    const nav_grade = document.querySelector(".searchByGrade");
+    nav_grade.addEventListener('click', () => {
+        const form = document.querySelector('.form');
+        form.innerHTML = gradeform();
     });
 }
+
 
 
 function signup() {
     const signup = document.querySelector(".nav_sign");
     signup.addEventListener('click', () => {
-        const app = document.querySelector('#app');
-        app.innerHTML = signUp();
-        wireUpSignIn();
+        
+       makeSignIn();
     })
 }
 
 function wireUpSignIn() {
     const signInBtn = document.querySelector("#loginSubmit");
-    signUp.addEventListener('click', () => {
+    signInBtn.addEventListener('click', () => {
         const loginName = document.querySelector("#loginName")
-        crud.postRequest("", {
-            "studentName": loginName.value
+        crud.postRequest("http://localhost:8080/api/students/add-studentName", {
+            "StudentName": loginName.value
         }, (user) => {
             signInUser = user;
+            makeHome();
         })
 
     })
@@ -150,6 +174,32 @@ function newcard() {
     signup.addEventListener('click', () => {
         const app = document.querySelector('#app');
         app.innerHTML = newCard();
+        wireUpNewFlashCard();
+    })
+}
+
+function wireUpNewFlashCard() {
+    const submitBtn = document.querySelector("#newSubmit");
+    submitBtn.addEventListener('click', () => {
+        const title = document.querySelector("#newTitle")
+        const description = document.querySelector("#newDescription")
+        const info = document.querySelector("#newCardInfo")
+        const image = document.querySelector("#newLink")
+        crud.postRequest("http://localhost:8080/api/flashCards/add-flashCard", {
+            "Title": title.value,
+            "CardInfo": info.value,
+            "Description": description.value,
+            "CardImg": image.value,
+            "StudentId": signInUser.id
+        }, (FirstCard) => {
+            console.log(FirstCard);
+            crud.getRequest('http://localhost:8080/api/flashCards/' + FirstCard.id, Card => {
+                console.log(Card);
+                app.innerHTML = flashCard(Card);
+
+            })
+        })
+
     })
 }
 
@@ -157,9 +207,9 @@ function my_Cards() {
     const card = document.querySelector(".nav_myCards");
     card.addEventListener('click', () => {
         const app = document.querySelector("#app");
-        crud.getRequest('http://localhost:8080/api/flashCards', Cards => {
-            console.log(Cards);
-            app.innerHTML = myCards(Cards);
+        crud.getRequest('http://localhost:8080/api/students/'+signInUser.id, Student => {
+            console.log(Student);
+            app.innerHTML = myCards(Student.flashCards);
             bind_links();
         })
     })
@@ -216,14 +266,15 @@ function contact() {
 
 function carousel() {
 
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 9000); // Change image every 2 seconds
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+        myIndex = 1
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 9000); // Change image every 2 seconds
 }
-
