@@ -16,7 +16,9 @@ import FlashCardTitleForm from './components/flashCardTitleForm';
 let signInUser;
 
 var myIndex = 0;
+
 buildPage();
+
 
 
 function buildPage() {

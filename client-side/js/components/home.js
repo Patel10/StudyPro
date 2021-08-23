@@ -23,9 +23,5 @@ export default function home()
  <img class="mySlides" src="${puzzle}" style="width:50%">
 </div>
 
-
-
-
-
     `;
 }

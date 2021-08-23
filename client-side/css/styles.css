@@ -182,7 +182,6 @@ nav {
   top: 200px;
   display: flex;
   flex-direction: column;
-  
   align-items: center;
   height: 30%;
   text-align: center;
@@ -226,18 +225,14 @@ nav {
   align-items: center;
   width: 150%;
   padding-bottom: 10px;
-  padding-top: 10%;
-  padding-left: 8.5em;
-
-  
-
+  padding-top: 50%;
+ 
 }
 
 .two-column-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-
 
 /* ------------------------------------- */
 .tag-list {
