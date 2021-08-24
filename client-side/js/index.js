@@ -17,7 +17,9 @@ import gradeform from './components/gradeform';
 let signInUser;
 
 var myIndex = 0;
+
 buildPage();
+
 
 
 function buildPage() {
@@ -29,8 +31,8 @@ function buildPage() {
     contact();
     newcard();
     landHome();
-    makeHome();
     my_Cards();
+    makeSignIn();
 
 }
 
@@ -42,6 +44,11 @@ function landHome() {
         makeHome();
     })
 
+}
+function makeSignIn() {
+ const app = document.querySelector('#app');
+        app.innerHTML = signUp();
+        wireUpSignIn();
 }
 
 function makeHome() {
@@ -66,7 +73,7 @@ function searchByBtn() {
     search_by.addEventListener('click', () => {
         const app = document.querySelector("#app");
         app.innerHTML = searchBy(searchBy)
-        wireUpHashTagSearch();
+       // wireUpHashTagSearch();
         wireUpStudentNameSearch();
         wireUpGradeSearch();
         wireUpFlashCardTitleSearch();
@@ -101,7 +108,23 @@ function wireUpStudentNameSearch() {
         //  });
         const form = document.querySelector('.form');
         form.innerHTML = StudentNameForm();
+        doStudentNameSearch();
     });
+}
+function doStudentNameSearch() {
+    const nameSearch = document.querySelector(".studentNameSearch");
+   nameSearch.addEventListener('click', () => {
+        const app = document.querySelector("#app");
+        const studentName = document.querySelector('.studentNameInput')
+        crud.getRequest('http://localhost:8080/api/students/name/'+studentName.value, Student => {
+            console.log(Student);
+            app.innerHTML = myCards(Student.flashCards);
+            bind_links();
+        });
+       
+
+    });
+
 }
 
 function wireUpFlashCardTitleSearch() {
@@ -126,20 +149,20 @@ function wireUpGradeSearch() {
 function signup() {
     const signup = document.querySelector(".nav_sign");
     signup.addEventListener('click', () => {
-        const app = document.querySelector('#app');
-        app.innerHTML = signUp();
-        wireUpSignIn();
+        
+       makeSignIn();
     })
 }
 
 function wireUpSignIn() {
     const signInBtn = document.querySelector("#loginSubmit");
-    signUp.addEventListener('click', () => {
+    signInBtn.addEventListener('click', () => {
         const loginName = document.querySelector("#loginName")
-        crud.postRequest("", {
-            "studentName": loginName.value
+        crud.postRequest("http://localhost:8080/api/students/add-studentName", {
+            "StudentName": loginName.value
         }, (user) => {
             signInUser = user;
+            makeHome();
         })
 
     })
@@ -165,9 +188,9 @@ function wireUpNewFlashCard() {
         crud.postRequest("http://localhost:8080/api/flashCards/add-flashCard", {
             "Title": title.value,
             "CardInfo": info.value,
-            "CardDescription": description.value,
+            "Description": description.value,
             "CardImg": image.value,
-            "StudentId": 8 //signInUser.id
+            "StudentId": signInUser.id
         }, (FirstCard) => {
             console.log(FirstCard);
             crud.getRequest('http://localhost:8080/api/flashCards/' + FirstCard.id, Card => {
@@ -184,9 +207,9 @@ function my_Cards() {
     const card = document.querySelector(".nav_myCards");
     card.addEventListener('click', () => {
         const app = document.querySelector("#app");
-        crud.getRequest('http://localhost:8080/api/flashCards', Cards => {
-            console.log(Cards);
-            app.innerHTML = myCards(Cards);
+        crud.getRequest('http://localhost:8080/api/students/'+signInUser.id, Student => {
+            console.log(Student);
+            app.innerHTML = myCards(Student.flashCards);
             bind_links();
         })
     })
