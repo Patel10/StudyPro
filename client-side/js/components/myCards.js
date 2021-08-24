@@ -10,20 +10,13 @@ export default function myCards(Cards) {
         <p class="tag-list-title">${myCard.title}</p>
         </div>
        
-       
-
-
-        
-        
+               
         `
     }).join("")}
     
-    
-    
-    
-    
+     
     
     </div>
+    `;
 
-    `
 }

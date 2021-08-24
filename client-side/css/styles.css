@@ -290,7 +290,7 @@ nav {
 }
 
 
-.searchStudent {
+.searchByStudentName {
   background-color: chocolate;
   padding: 10px;
   margin: 8px;
@@ -303,7 +303,7 @@ nav {
 
 }
 
-.searchCard {
+.searchByFlashCardTitle {
   background-color: chocolate;
   padding: 10px;
   margin: 8px;
@@ -315,7 +315,7 @@ nav {
 
 }
 
-.searchGrade {
+.searchByGrade {
   background-color: chocolate;
   padding: 10px;
   margin: 8px;
@@ -326,3 +326,15 @@ nav {
   color: white;
 
 }
+
+/* .form {
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+
+} */
