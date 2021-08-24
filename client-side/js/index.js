@@ -17,7 +17,9 @@ import gradeform from './components/gradeform';
 let signInUser;
 
 var myIndex = 0;
+
 buildPage();
+
 
 
 function buildPage() {
