@@ -161,7 +161,7 @@ nav {
 .logo-wrapper {
   padding-top: 2px;
   padding-left: 20px;
-  width: 50%;
+  
   height: auto;
 
 
@@ -196,13 +196,13 @@ nav {
 
 .img-text-wrapper:hover {
   transition: 1.2s;
-  top: 45px;
+  top: 20px;
 }
 
 .img-text-wrapper .subtitle {
   color: transparent;
   transition: 1s;
-  top: 30px;
+  top: 20px;
   padding-left: 10px;
   padding-bottom: 15px;
 
@@ -229,10 +229,10 @@ nav {
 
 .logo-wrapper img {
   align-items: center;
-  width: 150%;
+  width: 120%;
   padding-bottom: 10px;
   padding-top: 10%;
-  padding-left: 8.5em;
+  /* padding-left: 8.5em; */
 
 
 
