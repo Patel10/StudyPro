@@ -17,7 +17,6 @@ public class FlashCard {
     private String image;
 
     @OneToMany(mappedBy = "flashCard")
-
     private Collection<CardContent> cardContents;
     @ManyToMany
     private Set<HashTag> hashTags;
@@ -72,7 +71,9 @@ public class FlashCard {
         this.image = image;
         this.student = student;
         this.hashTags = new HashSet<HashTag>();
+
     }
+
 
     @Override
     public boolean equals(Object o) {

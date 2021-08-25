@@ -43,7 +43,7 @@ public class Populator implements CommandLineRunner {
         hashTagRepo.save(hashTag4);
         hashTagRepo.save(hashTag5);
         hashTagRepo.save(hashTag6);
-        Student student1 = new Student("Halima smith", "3");
+        Student student1 = new Student("Halima Smith", "3");
         Student student2 = new Student("Andrew Washington", "6");
         Student student3 = new Student("Elijah Stewart", "9");
 

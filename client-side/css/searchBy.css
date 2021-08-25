@@ -1,56 +1,116 @@
 .searchHash {
-    background-color: chocolate;
-    padding: 10px;
-    margin: 8px;
-    border-radius: 6px;
-    font-weight: bolder;
-    text-transform: uppercase;
-    position: relative;
-    color: white;
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
 
 }
 
 .searchHash:hover:after {
-    height: 100%;
-    left: 0;
-    top: 0;
-    width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 
-.searchStudent {
-    background-color: chocolate;
-    padding: 10px;
-    margin: 8px;
-    border-radius: 6px;
-    font-weight: bolder;
-    text-transform: uppercase;
-    position: relative;
-    color: white;
+.searchByStudentName {
+  background-color: chocolate;
+  padding: 18px;
+  margin: 15px;
+  border-radius: 6px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+  box-shadow: 2px 2px 2px 2px rgb(5, 0, 12);
 
 
 }
 
-.searchCard {
-    background-color: chocolate;
-    padding: 10px;
-    margin: 8px;
-    border-radius: 6px;
-    font-weight: bolder;
-    text-transform: uppercase;
-    position: relative;
-    color: white;
+.searchByFlashCardTitle {
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
 
 }
 
-.searchGrade {
-    background-color: chocolate;
-    padding: 10px;
-    margin: 8px;
-    border-radius: 6px;
-    font-weight: bolder;
-    text-transform: uppercase;
-    position: relative;
-    color: white;
+.searchByGrade {
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  font-size: x-large;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
 
+}
+
+.studentNameSearch {
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+
+
+}
+
+/* .form {
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+
+} */
+.searchingHeader {
+  display: block;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+
+}
+
+.studentNameInput {
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+}
+
+.searchImgKids {
+  border: 5px dotted blue;
+  border-radius: 3px;
+  padding: 10px;
+  background-color: chocolate;
+  margin: 15px;
+
+}
+
+.searchByContainer {
+  background-color: #8a8a8a;
 }

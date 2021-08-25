@@ -54,10 +54,12 @@ public class FlashCardController {
         Student TempStudent = studentRepo.findById(flashCardStudentId).get();
         FlashCard tempFlashCard = new FlashCard(flashCardTitle, TempStudent.getStudentName(), flashCardDescription, flashCardImg, TempStudent);
         flashCardRepo.save(tempFlashCard);
-        CardContent cardContent = new CardContent(TempStudent.getStudentName(), flashCardTitle, flashCardInfo, "", tempFlashCard);
-        cardContentRepo.save(cardContent);
+       CardContent cardContent = new CardContent(TempStudent.getStudentName(), flashCardTitle, flashCardInfo, "", tempFlashCard);
 
-        return tempFlashCard;
+       cardContentRepo.save(cardContent);
+
+
+        return flashCardRepo.findById(tempFlashCard.getId()).get();
     }
 
         @PostMapping("/api/flashCards/{id}/add-hashtag")
