@@ -45,10 +45,11 @@ function landHome() {
     })
 
 }
+
 function makeSignIn() {
- const app = document.querySelector('#app');
-        app.innerHTML = signUp();
-        wireUpSignIn();
+    const app = document.querySelector('#app');
+    app.innerHTML = signUp();
+    wireUpSignIn();
 }
 
 function makeHome() {
@@ -73,7 +74,7 @@ function searchByBtn() {
     search_by.addEventListener('click', () => {
         const app = document.querySelector("#app");
         app.innerHTML = searchBy(searchBy)
-       // wireUpHashTagSearch();
+        // wireUpHashTagSearch();
         wireUpStudentNameSearch();
         wireUpGradeSearch();
         wireUpFlashCardTitleSearch();
@@ -111,17 +112,18 @@ function wireUpStudentNameSearch() {
         doStudentNameSearch();
     });
 }
+
 function doStudentNameSearch() {
     const nameSearch = document.querySelector(".studentNameSearch");
-   nameSearch.addEventListener('click', () => {
+    nameSearch.addEventListener('click', () => {
         const app = document.querySelector("#app");
         const studentName = document.querySelector('.studentNameInput')
-        crud.getRequest('http://localhost:8080/api/students/name/'+studentName.value, Student => {
+        crud.getRequest('http://localhost:8080/api/students/name/' + studentName.value, Student => {
             console.log(Student);
             app.innerHTML = myCards(Student.flashCards);
             bind_links();
         });
-       
+
 
     });
 
@@ -149,8 +151,8 @@ function wireUpGradeSearch() {
 function signup() {
     const signup = document.querySelector(".nav_sign");
     signup.addEventListener('click', () => {
-        
-       makeSignIn();
+
+        makeSignIn();
     })
 }
 
@@ -207,7 +209,7 @@ function my_Cards() {
     const card = document.querySelector(".nav_myCards");
     card.addEventListener('click', () => {
         const app = document.querySelector("#app");
-        crud.getRequest('http://localhost:8080/api/students/'+signInUser.id, Student => {
+        crud.getRequest('http://localhost:8080/api/students/' + signInUser.id, Student => {
             console.log(Student);
             app.innerHTML = myCards(Student.flashCards);
             bind_links();
