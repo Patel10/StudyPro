@@ -161,7 +161,7 @@ nav {
 .logo-wrapper {
   padding-top: 2px;
   padding-left: 20px;
-  
+
   height: auto;
 
 
@@ -288,12 +288,12 @@ nav {
 }
 
 
-.searchStudent {
+.searchByStudentName {
   background-color: chocolate;
-  padding: 10px;
-  margin: 8px;
+  padding: 18px;
+  margin: 15px;
   border-radius: 6px;
-  font-weight: bolder;
+  font-weight: 700;
   text-transform: uppercase;
   position: relative;
   color: white;
@@ -314,6 +314,19 @@ nav {
 }
 
 .searchGrade {
+  background-color: chocolate;
+  padding: 10px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bolder;
+  font-size: x-large;
+  text-transform: uppercase;
+  position: relative;
+  color: white;
+
+}
+
+.studentNameSearch {
   background-color: chocolate;
   padding: 10px;
   margin: 8px;
