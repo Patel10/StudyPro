@@ -160,9 +160,16 @@ nav {
 
 .logo-wrapper {
   padding-top: 2px;
-  padding-left: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 30px;
+  display: block;
+  margin: 8px;
+  height: 40%;
+  width: 60%;
+  align-items: center;
+  flex-direction: center;
 
-  height: auto;
 
 
 }
@@ -228,14 +235,12 @@ nav {
 }
 
 .logo-wrapper img {
-  align-items: center;
-  width: 120%;
-  padding-bottom: 10px;
-  padding-top: 10%;
-  /* padding-left: 8.5em; */
-
-
-
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .two-column-wrapper {
@@ -290,6 +295,7 @@ nav {
 
 .searchByStudentName {
   background-color: chocolate;
+  transition: 2s;
   padding: 18px;
   margin: 15px;
   border-radius: 6px;
@@ -368,7 +374,6 @@ nav {
   margin: 8px;
   border-radius: 6px;
   font-weight: bolder;
-
   position: relative;
   color: white;
 }
@@ -384,4 +389,32 @@ nav {
 
 .searchByContainer {
   background-color: #8a8a8a;
+  color: rgb(26, 24, 24);
+}
+
+.searchByContainerNew {
+  background-color: #8a8a8a;
+  color: rgb(26, 24, 24);
+
+}
+
+.tag-list-title {
+  /* background-color: blue; */
+  padding: 10px;
+  margin: 8px;
+  border-radius: 800px;
+  font-weight: bolder;
+  font-size: x-large;
+  position: relative;
+  color: green;
+  font-weight: 700;
+  text-decoration: underline;
+
+}
+
+.myCardKids {
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px 2px blue;
+  height: 50%;
+  width: 60%;
 }
